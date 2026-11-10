@@ -1,0 +1,1272 @@
+{
+  "version": "ng4_web_v1",
+  "powers": [
+    "Pog",
+    "Gom",
+    "Jup",
+    "Zok",
+    "Lod"
+  ],
+  "power_order": "Powers: Pog < Gom < Jup < Zok < Lod",
+  "instruction_pages": [
+    {
+      "body": "In this experiment, we’d like you to pretend that you are an anthropologist studying an alien group called the Numerons. Your job is to figure out some aspects of the Numerons’ number language.\n\nBelow are some things you’ve already discovered about their number language. Please study them carefully.",
+      "notes": ""
+    },
+    {
+      "body": "1. There are two kinds of one-word number words in Numerons’ number language: Digits and Powers.",
+      "notes": ""
+    },
+    {
+      "body": "Digits are words for small numbers. They represent any numeral word up to the value of the base number. In English, they could be any of the numbers below ten (one, two,…, nine). However, the base of the Numerons’ number language is unknown and may not conform to your own number base.\n\nSo far, we have only discovered two Digits: “Fim” and “Miv”. It is unknown whether Fim is greater than Miv or vice versa. They are just two of possibly many more Digits.",
+      "notes": "Digits: Fim ? Miv (“?” means the relative magnitude of the two Digits is unknown)"
+    },
+    {
+      "body": "Powers are words for some special large numbers. They represent a category of mainly nounlike numeral forms often used as multiplicational components. They are like thousand, billion, and other similar kinds of number words in English. Remember, the base of the Numerons’ number language is unknown and may not conform to your own number base.\n\nSo far, we have discovered five powers: “Pog,” “Gom,” “Jup,” “Zok,” and “Lod.” Lod is greater than Zok, Zok is greater than Jup, Jup is greater than Gom, and Gom is greater than Pog. These are just five of possibly many more multipliers.",
+      "notes": "Powers: Pog < Gom < Jup < Zok < Lod"
+    },
+    {
+      "body": "2. Number words in the Numeron language refer to positive whole numbers.",
+      "notes": ""
+    },
+    {
+      "body": "3. The Numerons’ number words are made by using a set of one-word number words and combining them to produce more complex numbers.",
+      "notes": ""
+    },
+    {
+      "body": "4. The number words are words used in the Numerons’ natural language (like “four” or “seventy-two” in English). They are NOT number symbols, such as the Arabic or Roman numerals (such as “4,” “IV,” “72,” or “LXXII”).",
+      "notes": ""
+    }
+  ],
+  "comprehension_intro": "Below are some questions to check your understanding of the Numeron's language.\n\nUse the number keys to select your answer or answers, then press Right Arrow to submit.",
+  "comprehension": [
+    {
+      "prompt": "Which ones are like “one,” “two,” and “three” … in English?",
+      "options": [
+        "Digits",
+        "Powers"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "prompt": "Which ones are like “-ty,” “hundred,” and “thousand” … in English?",
+      "options": [
+        "Digits",
+        "Powers"
+      ],
+      "correct": [
+        1
+      ]
+    },
+    {
+      "prompt": "Please select all words that are Digits:",
+      "options": [
+        "Fim",
+        "Pog",
+        "Gom",
+        "Miv",
+        "Jup",
+        "Zok",
+        "Lod"
+      ],
+      "correct": [
+        0,
+        3
+      ]
+    },
+    {
+      "prompt": "Please select all words that are Powers:",
+      "options": [
+        "Fim",
+        "Pog",
+        "Gom",
+        "Miv",
+        "Jup",
+        "Zok",
+        "Lod"
+      ],
+      "correct": [
+        1,
+        2,
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "magnitude_instructions": "We have a series of trials to assess your understanding of the Numerons’ number system. Study the relative magnitudes of the Numerons’ words—for example, Lod is greater than Zok.\n\nOn the next pages, you will see questions such as “Is Lod greater than Zok?” Press S for Yes or K for No. Make each judgment as quickly and accurately as you can.\n\nStudy the ordering in the Notes below. When you have memorized the relative magnitudes of the Powers, press Right Arrow to continue.",
+  "task_pages": [
+    {
+      "body": "Starting on the next page, you will see one number expression at a time. Your job is to decide whether it is a real number word in the Numerons’ language. In your own native language, for example, not all combinations of number words when placed together form another number word. If X is a number word and Y is a number word, the combinations XX, YY, XY, and YX may or may not be number words. Only certain combinations are real number words.",
+      "notes": ""
+    },
+    {
+      "body": "Please remember to study them carefully and then decide if they are a real number word. \n\nPress S for Yes or K for No. Respond as quickly as you can while trying to be correct.\n\nThe first trial starts in the next page.",
+      "notes": ""
+    }
+  ],
+  "judgment_prompt": "Is the number expression below a real number word in the Numerons’ language?",
+  "comparisons": [
+    {
+      "phase": "comparison",
+      "trial_id": "C01",
+      "stimulus": "Is Gom greater than Pog?",
+      "condition": "magnitude",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "s"
+    },
+    {
+      "phase": "comparison",
+      "trial_id": "C02",
+      "stimulus": "Is Pog greater than Gom?",
+      "condition": "magnitude",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "k"
+    },
+    {
+      "phase": "comparison",
+      "trial_id": "C03",
+      "stimulus": "Is Jup greater than Gom?",
+      "condition": "magnitude",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "s"
+    },
+    {
+      "phase": "comparison",
+      "trial_id": "C04",
+      "stimulus": "Is Gom greater than Jup?",
+      "condition": "magnitude",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "k"
+    },
+    {
+      "phase": "comparison",
+      "trial_id": "C05",
+      "stimulus": "Is Zok greater than Jup?",
+      "condition": "magnitude",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "s"
+    },
+    {
+      "phase": "comparison",
+      "trial_id": "C06",
+      "stimulus": "Is Jup greater than Zok?",
+      "condition": "magnitude",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "k"
+    },
+    {
+      "phase": "comparison",
+      "trial_id": "C07",
+      "stimulus": "Is Lod greater than Zok?",
+      "condition": "magnitude",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "s"
+    },
+    {
+      "phase": "comparison",
+      "trial_id": "C08",
+      "stimulus": "Is Zok greater than Lod?",
+      "condition": "magnitude",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "k"
+    },
+    {
+      "phase": "comparison",
+      "trial_id": "C09",
+      "stimulus": "Is Jup greater than Pog?",
+      "condition": "magnitude",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "s"
+    },
+    {
+      "phase": "comparison",
+      "trial_id": "C10",
+      "stimulus": "Is Pog greater than Jup?",
+      "condition": "magnitude",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "k"
+    },
+    {
+      "phase": "comparison",
+      "trial_id": "C11",
+      "stimulus": "Is Zok greater than Gom?",
+      "condition": "magnitude",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "s"
+    },
+    {
+      "phase": "comparison",
+      "trial_id": "C12",
+      "stimulus": "Is Gom greater than Zok?",
+      "condition": "magnitude",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "k"
+    },
+    {
+      "phase": "comparison",
+      "trial_id": "C13",
+      "stimulus": "Is Lod greater than Jup?",
+      "condition": "magnitude",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "s"
+    },
+    {
+      "phase": "comparison",
+      "trial_id": "C14",
+      "stimulus": "Is Jup greater than Lod?",
+      "condition": "magnitude",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "k"
+    },
+    {
+      "phase": "comparison",
+      "trial_id": "C15",
+      "stimulus": "Is Zok greater than Pog?",
+      "condition": "magnitude",
+      "distance": 3,
+      "document_distance": 3,
+      "correct_key": "s"
+    },
+    {
+      "phase": "comparison",
+      "trial_id": "C16",
+      "stimulus": "Is Pog greater than Zok?",
+      "condition": "magnitude",
+      "distance": 3,
+      "document_distance": 3,
+      "correct_key": "k"
+    },
+    {
+      "phase": "comparison",
+      "trial_id": "C17",
+      "stimulus": "Is Lod greater than Gom?",
+      "condition": "magnitude",
+      "distance": 3,
+      "document_distance": 3,
+      "correct_key": "s"
+    },
+    {
+      "phase": "comparison",
+      "trial_id": "C18",
+      "stimulus": "Is Gom greater than Lod?",
+      "condition": "magnitude",
+      "distance": 3,
+      "document_distance": 3,
+      "correct_key": "k"
+    },
+    {
+      "phase": "comparison",
+      "trial_id": "C19",
+      "stimulus": "Is Lod greater than Pog?",
+      "condition": "magnitude",
+      "distance": 4,
+      "document_distance": 4,
+      "correct_key": "s"
+    },
+    {
+      "phase": "comparison",
+      "trial_id": "C20",
+      "stimulus": "Is Pog greater than Lod?",
+      "condition": "magnitude",
+      "distance": 4,
+      "document_distance": 4,
+      "correct_key": "k"
+    }
+  ],
+  "judgments": [
+    {
+      "phase": "judgment",
+      "trial_id": "J01",
+      "stimulus": "Fim Pog Gom Miv",
+      "condition": "syntax_packing",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "s",
+      "power_pair": "Pog Gom",
+      "digit_order": "Fim Miv",
+      "table_row": 1,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J02",
+      "stimulus": "Fim Gom Pog Miv",
+      "condition": "no_packing",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "k",
+      "power_pair": "Pog Gom",
+      "digit_order": "Fim Miv",
+      "table_row": 1,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J03",
+      "stimulus": "Pog Gom Fim Miv",
+      "condition": "no_syntax",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "k",
+      "power_pair": "Pog Gom",
+      "digit_order": "Fim Miv",
+      "table_row": 1,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J04",
+      "stimulus": "Miv Pog Gom Fim",
+      "condition": "syntax_packing",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "s",
+      "power_pair": "Pog Gom",
+      "digit_order": "Miv Fim",
+      "table_row": 2,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J05",
+      "stimulus": "Miv Gom Pog Fim",
+      "condition": "no_packing",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "k",
+      "power_pair": "Pog Gom",
+      "digit_order": "Miv Fim",
+      "table_row": 2,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J06",
+      "stimulus": "Pog Gom Miv Fim",
+      "condition": "no_syntax",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "k",
+      "power_pair": "Pog Gom",
+      "digit_order": "Miv Fim",
+      "table_row": 2,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J07",
+      "stimulus": "Fim Gom Jup Miv",
+      "condition": "syntax_packing",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "s",
+      "power_pair": "Gom Jup",
+      "digit_order": "Fim Miv",
+      "table_row": 3,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J08",
+      "stimulus": "Fim Jup Gom Miv",
+      "condition": "no_packing",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "k",
+      "power_pair": "Gom Jup",
+      "digit_order": "Fim Miv",
+      "table_row": 3,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J09",
+      "stimulus": "Gom Jup Fim Miv",
+      "condition": "no_syntax",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "k",
+      "power_pair": "Gom Jup",
+      "digit_order": "Fim Miv",
+      "table_row": 3,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J10",
+      "stimulus": "Miv Gom Jup Fim",
+      "condition": "syntax_packing",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "s",
+      "power_pair": "Gom Jup",
+      "digit_order": "Miv Fim",
+      "table_row": 4,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J11",
+      "stimulus": "Miv Jup Gom Fim",
+      "condition": "no_packing",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "k",
+      "power_pair": "Gom Jup",
+      "digit_order": "Miv Fim",
+      "table_row": 4,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J12",
+      "stimulus": "Gom Jup Miv Fim",
+      "condition": "no_syntax",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "k",
+      "power_pair": "Gom Jup",
+      "digit_order": "Miv Fim",
+      "table_row": 4,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J13",
+      "stimulus": "Fim Jup Zok Miv",
+      "condition": "syntax_packing",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "s",
+      "power_pair": "Jup Zok",
+      "digit_order": "Fim Miv",
+      "table_row": 5,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J14",
+      "stimulus": "Fim Zok Jup Miv",
+      "condition": "no_packing",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "k",
+      "power_pair": "Jup Zok",
+      "digit_order": "Fim Miv",
+      "table_row": 5,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J15",
+      "stimulus": "Jup Zok Fim Miv",
+      "condition": "no_syntax",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "k",
+      "power_pair": "Jup Zok",
+      "digit_order": "Fim Miv",
+      "table_row": 5,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J16",
+      "stimulus": "Miv Jup Zok Fim",
+      "condition": "syntax_packing",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "s",
+      "power_pair": "Jup Zok",
+      "digit_order": "Miv Fim",
+      "table_row": 6,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J17",
+      "stimulus": "Miv Zok Jup Fim",
+      "condition": "no_packing",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "k",
+      "power_pair": "Jup Zok",
+      "digit_order": "Miv Fim",
+      "table_row": 6,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J18",
+      "stimulus": "Jup Zok Miv Fim",
+      "condition": "no_syntax",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "k",
+      "power_pair": "Jup Zok",
+      "digit_order": "Miv Fim",
+      "table_row": 6,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J19",
+      "stimulus": "Fim Zok Lod Miv",
+      "condition": "syntax_packing",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "s",
+      "power_pair": "Zok Lod",
+      "digit_order": "Fim Miv",
+      "table_row": 7,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J20",
+      "stimulus": "Fim Lod Zok Miv",
+      "condition": "no_packing",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "k",
+      "power_pair": "Zok Lod",
+      "digit_order": "Fim Miv",
+      "table_row": 7,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J21",
+      "stimulus": "Zok Lod Fim Miv",
+      "condition": "no_syntax",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "k",
+      "power_pair": "Zok Lod",
+      "digit_order": "Fim Miv",
+      "table_row": 7,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J22",
+      "stimulus": "Miv Zok Lod Fim",
+      "condition": "syntax_packing",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "s",
+      "power_pair": "Zok Lod",
+      "digit_order": "Miv Fim",
+      "table_row": 8,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J23",
+      "stimulus": "Miv Lod Zok Fim",
+      "condition": "no_packing",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "k",
+      "power_pair": "Zok Lod",
+      "digit_order": "Miv Fim",
+      "table_row": 8,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J24",
+      "stimulus": "Zok Lod Miv Fim",
+      "condition": "no_syntax",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "k",
+      "power_pair": "Zok Lod",
+      "digit_order": "Miv Fim",
+      "table_row": 8,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J25",
+      "stimulus": "Fim Pog Jup Miv",
+      "condition": "syntax_packing",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "s",
+      "power_pair": "Pog Jup",
+      "digit_order": "Fim Miv",
+      "table_row": 9,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J26",
+      "stimulus": "Fim Jup Pog Miv",
+      "condition": "no_packing",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "k",
+      "power_pair": "Pog Jup",
+      "digit_order": "Fim Miv",
+      "table_row": 9,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J27",
+      "stimulus": "Pog Jup Fim Miv",
+      "condition": "no_syntax",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "k",
+      "power_pair": "Pog Jup",
+      "digit_order": "Fim Miv",
+      "table_row": 9,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J28",
+      "stimulus": "Miv Pog Jup Fim",
+      "condition": "syntax_packing",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "s",
+      "power_pair": "Pog Jup",
+      "digit_order": "Miv Fim",
+      "table_row": 10,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J29",
+      "stimulus": "Miv Jup Pog Fim",
+      "condition": "no_packing",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "k",
+      "power_pair": "Pog Jup",
+      "digit_order": "Miv Fim",
+      "table_row": 10,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J30",
+      "stimulus": "Pog Jup Miv Fim",
+      "condition": "no_syntax",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "k",
+      "power_pair": "Pog Jup",
+      "digit_order": "Miv Fim",
+      "table_row": 10,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J31",
+      "stimulus": "Fim Gom Zok Miv",
+      "condition": "syntax_packing",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "s",
+      "power_pair": "Gom Zok",
+      "digit_order": "Fim Miv",
+      "table_row": 11,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J32",
+      "stimulus": "Fim Zok Gom Miv",
+      "condition": "no_packing",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "k",
+      "power_pair": "Gom Zok",
+      "digit_order": "Fim Miv",
+      "table_row": 11,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J33",
+      "stimulus": "Gom Zok Fim Miv",
+      "condition": "no_syntax",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "k",
+      "power_pair": "Gom Zok",
+      "digit_order": "Fim Miv",
+      "table_row": 11,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J34",
+      "stimulus": "Miv Gom Zok Fim",
+      "condition": "syntax_packing",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "s",
+      "power_pair": "Gom Zok",
+      "digit_order": "Miv Fim",
+      "table_row": 12,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J35",
+      "stimulus": "Miv Zok Gom Fim",
+      "condition": "no_packing",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "k",
+      "power_pair": "Gom Zok",
+      "digit_order": "Miv Fim",
+      "table_row": 12,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J36",
+      "stimulus": "Gom Zok Miv Fim",
+      "condition": "no_syntax",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "k",
+      "power_pair": "Gom Zok",
+      "digit_order": "Miv Fim",
+      "table_row": 12,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J37",
+      "stimulus": "Fim Jup Lod Miv",
+      "condition": "syntax_packing",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "s",
+      "power_pair": "Jup Lod",
+      "digit_order": "Fim Miv",
+      "table_row": 13,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J38",
+      "stimulus": "Fim Lod Jup Miv",
+      "condition": "no_packing",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "k",
+      "power_pair": "Jup Lod",
+      "digit_order": "Fim Miv",
+      "table_row": 13,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J39",
+      "stimulus": "Jup Lod Fim Miv",
+      "condition": "no_syntax",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "k",
+      "power_pair": "Jup Lod",
+      "digit_order": "Fim Miv",
+      "table_row": 13,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J40",
+      "stimulus": "Miv Jup Lod Fim",
+      "condition": "syntax_packing",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "s",
+      "power_pair": "Jup Lod",
+      "digit_order": "Miv Fim",
+      "table_row": 14,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J41",
+      "stimulus": "Miv Lod Jup Fim",
+      "condition": "no_packing",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "k",
+      "power_pair": "Jup Lod",
+      "digit_order": "Miv Fim",
+      "table_row": 14,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J42",
+      "stimulus": "Jup Lod Miv Fim",
+      "condition": "no_syntax",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "k",
+      "power_pair": "Jup Lod",
+      "digit_order": "Miv Fim",
+      "table_row": 14,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J43",
+      "stimulus": "Fim Pog Zok Miv",
+      "condition": "syntax_packing",
+      "distance": 3,
+      "document_distance": 3,
+      "correct_key": "s",
+      "power_pair": "Pog Zok",
+      "digit_order": "Fim Miv",
+      "table_row": 15,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J44",
+      "stimulus": "Fim Zok Pog Miv",
+      "condition": "no_packing",
+      "distance": 3,
+      "document_distance": 3,
+      "correct_key": "k",
+      "power_pair": "Pog Zok",
+      "digit_order": "Fim Miv",
+      "table_row": 15,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J45",
+      "stimulus": "Pog Zok Fim Miv",
+      "condition": "no_syntax",
+      "distance": 3,
+      "document_distance": 3,
+      "correct_key": "k",
+      "power_pair": "Pog Zok",
+      "digit_order": "Fim Miv",
+      "table_row": 15,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J46",
+      "stimulus": "Miv Pog Zok Fim",
+      "condition": "syntax_packing",
+      "distance": 3,
+      "document_distance": 3,
+      "correct_key": "s",
+      "power_pair": "Pog Zok",
+      "digit_order": "Miv Fim",
+      "table_row": 16,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J47",
+      "stimulus": "Miv Zok Pog Fim",
+      "condition": "no_packing",
+      "distance": 3,
+      "document_distance": 3,
+      "correct_key": "k",
+      "power_pair": "Pog Zok",
+      "digit_order": "Miv Fim",
+      "table_row": 16,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J48",
+      "stimulus": "Pog Zok Miv Fim",
+      "condition": "no_syntax",
+      "distance": 3,
+      "document_distance": 3,
+      "correct_key": "k",
+      "power_pair": "Pog Zok",
+      "digit_order": "Miv Fim",
+      "table_row": 16,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J49",
+      "stimulus": "Fim Gom Lod Miv",
+      "condition": "syntax_packing",
+      "distance": 3,
+      "document_distance": 3,
+      "correct_key": "s",
+      "power_pair": "Gom Lod",
+      "digit_order": "Fim Miv",
+      "table_row": 17,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J50",
+      "stimulus": "Fim Lod Gom Miv",
+      "condition": "no_packing",
+      "distance": 3,
+      "document_distance": 3,
+      "correct_key": "k",
+      "power_pair": "Gom Lod",
+      "digit_order": "Fim Miv",
+      "table_row": 17,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J51",
+      "stimulus": "Gom Lod Fim Miv",
+      "condition": "no_syntax",
+      "distance": 3,
+      "document_distance": 3,
+      "correct_key": "k",
+      "power_pair": "Gom Lod",
+      "digit_order": "Fim Miv",
+      "table_row": 17,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J52",
+      "stimulus": "Miv Gom Lod Fim",
+      "condition": "syntax_packing",
+      "distance": 3,
+      "document_distance": 3,
+      "correct_key": "s",
+      "power_pair": "Gom Lod",
+      "digit_order": "Miv Fim",
+      "table_row": 18,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J53",
+      "stimulus": "Miv Lod Gom Fim",
+      "condition": "no_packing",
+      "distance": 3,
+      "document_distance": 3,
+      "correct_key": "k",
+      "power_pair": "Gom Lod",
+      "digit_order": "Miv Fim",
+      "table_row": 18,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J54",
+      "stimulus": "Gom Lod Miv Fim",
+      "condition": "no_syntax",
+      "distance": 3,
+      "document_distance": 3,
+      "correct_key": "k",
+      "power_pair": "Gom Lod",
+      "digit_order": "Miv Fim",
+      "table_row": 18,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J55",
+      "stimulus": "Fim Pog Lod Miv",
+      "condition": "syntax_packing",
+      "distance": 4,
+      "document_distance": 4,
+      "correct_key": "s",
+      "power_pair": "Pog Lod",
+      "digit_order": "Fim Miv",
+      "table_row": 19,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J56",
+      "stimulus": "Fim Lod Pog Miv",
+      "condition": "no_packing",
+      "distance": 4,
+      "document_distance": 4,
+      "correct_key": "k",
+      "power_pair": "Pog Lod",
+      "digit_order": "Fim Miv",
+      "table_row": 19,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J57",
+      "stimulus": "Pog Lod Fim Miv",
+      "condition": "no_syntax",
+      "distance": 4,
+      "document_distance": 4,
+      "correct_key": "k",
+      "power_pair": "Pog Lod",
+      "digit_order": "Fim Miv",
+      "table_row": 19,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J58",
+      "stimulus": "Miv Pog Lod Fim",
+      "condition": "syntax_packing",
+      "distance": 4,
+      "document_distance": 4,
+      "correct_key": "s",
+      "power_pair": "Pog Lod",
+      "digit_order": "Miv Fim",
+      "table_row": 20,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J59",
+      "stimulus": "Miv Lod Pog Fim",
+      "condition": "no_packing",
+      "distance": 4,
+      "document_distance": 4,
+      "correct_key": "k",
+      "power_pair": "Pog Lod",
+      "digit_order": "Miv Fim",
+      "table_row": 20,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    },
+    {
+      "phase": "judgment",
+      "trial_id": "J60",
+      "stimulus": "Pog Lod Miv Fim",
+      "condition": "no_syntax",
+      "distance": 4,
+      "document_distance": 4,
+      "correct_key": "k",
+      "power_pair": "Pog Lod",
+      "digit_order": "Miv Fim",
+      "table_row": 20,
+      "stimulus_set": "five_powers_ten_pairs_v2"
+    }
+  ],
+  "config": {
+    "fixation_seconds": 0.5,
+    "intertrial_seconds": 0.25,
+    "fullscreen": true,
+    "show_bonus_statement": false,
+    "bonus_threshold": 0.8,
+    "description": "Bonus wording is disabled. This program does not issue payments.",
+    "learning_consecutive_correct": 20,
+    "correct_border_seconds": 0.4,
+    "learning_pass_rule": "restart_on_error_perfect_block"
+  },
+  "demographics": {
+    "questionnaire_version": "nine_questions_v2",
+    "intro": "Thank you for participating in this experiment. We have a few final questions about your background.",
+    "questions": [
+      {
+        "id": "age",
+        "type": "integer",
+        "prompt": "What is your age in years?"
+      },
+      {
+        "id": "gender",
+        "type": "choice",
+        "prompt": "How do you describe your gender?",
+        "options": [
+          [
+            1,
+            "Male"
+          ],
+          [
+            2,
+            "Female"
+          ],
+          [
+            3,
+            "Transgender"
+          ],
+          [
+            4,
+            "Non-binary"
+          ],
+          [
+            5,
+            "I don’t want to answer"
+          ]
+        ]
+      },
+      {
+        "id": "language",
+        "type": "choice",
+        "prompt": "What is your native language?",
+        "options": [
+          [
+            1,
+            "English"
+          ],
+          [
+            2,
+            "Other (please specify)"
+          ]
+        ],
+        "other_code": 2
+      },
+      {
+        "id": "second_language",
+        "type": "choice",
+        "prompt": "Do you have a second language?",
+        "options": [
+          [
+            1,
+            "No"
+          ],
+          [
+            2,
+            "Yes (please specify)"
+          ]
+        ],
+        "other_code": 2
+      },
+      {
+        "id": "other_language",
+        "type": "text",
+        "prompt": "Besides the languages you have already listed, in which other languages do you know number words?"
+      },
+      {
+        "id": "major",
+        "type": "longtext",
+        "prompt": "What is your current, past, or intended college major? If you have no university education, please leave this blank."
+      },
+      {
+        "id": "math",
+        "type": "dropdown",
+        "prompt": "How many math courses have you taken in college?",
+        "options": [
+          [
+            1,
+            "0"
+          ],
+          [
+            2,
+            "1"
+          ],
+          [
+            3,
+            "2"
+          ],
+          [
+            4,
+            "3"
+          ],
+          [
+            5,
+            "4"
+          ],
+          [
+            6,
+            "5"
+          ],
+          [
+            7,
+            "6"
+          ],
+          [
+            8,
+            "7"
+          ],
+          [
+            9,
+            "8"
+          ],
+          [
+            10,
+            "9"
+          ],
+          [
+            11,
+            "10"
+          ],
+          [
+            12,
+            "11"
+          ],
+          [
+            13,
+            "12"
+          ],
+          [
+            14,
+            "13"
+          ],
+          [
+            15,
+            "14"
+          ],
+          [
+            16,
+            "15"
+          ],
+          [
+            17,
+            "16"
+          ],
+          [
+            18,
+            "17"
+          ],
+          [
+            19,
+            "18"
+          ],
+          [
+            20,
+            "19"
+          ],
+          [
+            21,
+            "20"
+          ],
+          [
+            22,
+            "Beyond 20"
+          ]
+        ]
+      },
+      {
+        "id": "strategy",
+        "type": "longtext",
+        "prompt": "Please describe the strategies you used to decide whether the number expressions were real number words in the Numerons’ language."
+      },
+      {
+        "id": "comments",
+        "type": "longtext",
+        "prompt": "Please share any comments you have about the experiment."
+      }
+    ]
+  },
+  "content_sha256": "d45048ff556458ebd9095590dc3ee19c0cd906dd55bdc5bea95793427e762267"
+}
