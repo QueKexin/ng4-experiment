@@ -35,7 +35,10 @@ export class Learning {
     return result;
   }
 }
-export function responseText(key){return ({s:'Yes',k:'No'})[key]??key;}
+export function responseText(key,trial={}){
+  const statement=['learning','comparison'].includes(trial.phase)&&/^\w+ > \w+$/.test(trial.stimulus??'');
+  return (statement?{s:'Correct',k:'Incorrect'}:{s:'Yes',k:'No'})[key]??key;
+}
 export function sameSelection(selection,expected){
   return selection.size===expected.length&&expected.every(i=>selection.has(i));
 }
@@ -45,7 +48,7 @@ export function cleanRows(rows,meta,answers={}){
     Object.assign(result,{session:meta.session,participant:meta.participant,experiment_version:meta.version,
       engine:'browser',phase:row.phase,trial_id:row.trial_id,trial_number:row.presentation_order,
       stimulus:row.stimulus,condition:row.condition,distance:row.distance??'',
-      correct_response:responseText(row.correct_key),response:responseText(row.response),
+      correct_response:responseText(row.correct_key,row),response:responseText(row.response,row),
       correct:row.correct,rt_seconds:row.rt_seconds});
     for(const [id,field] of Object.entries(DEMOGRAPHIC_MAP)){
       const answer=answers[id];
@@ -85,13 +88,13 @@ export function csv(rows,fields=CLEAN_FIELDS){
   return '\uFEFF'+[fields.map(escape).join(','),...rows.map(row=>fields.map(f=>escape(row[f])).join(','))].join('\r\n');
 }
 export function validateContent(content){
-  const order=['Pog','Gom','Jup','Zok','Lod'];
+  const order=['Pog','Gom','Jop','Zok','Lod'];
   if(JSON.stringify(content.powers)!==JSON.stringify(order))throw new Error('Unexpected Power ordering.');
   if(content.comparisons.length!==20||content.judgments.length!==60)throw new Error('Trial counts are incorrect.');
   if(content.config.learning_consecutive_correct!==20||content.config.learning_pass_rule!=='restart_on_error_perfect_block')
     throw new Error('Incorrect learning criterion.');
   for(const trial of content.comparisons){
-    const [,a,b]=trial.stimulus.match(/^Is (\w+) greater than (\w+)\?$/)||[];
+    const [,a,b]=trial.stimulus.match(/^(\w+) > (\w+)$/)||[];
     if(!order.includes(a)||!order.includes(b)||a===b||trial.distance!==Math.abs(order.indexOf(a)-order.indexOf(b))||
       trial.correct_key!==(order.indexOf(a)>order.indexOf(b)?'s':'k'))throw new Error('Invalid comparison: '+trial.trial_id);
   }

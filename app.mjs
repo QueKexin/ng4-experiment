@@ -1,4 +1,4 @@
-import {Learning,seededRandom,shuffle,sameSelection,cleanRows,passingRows,payload,csv,validateContent} from './core.mjs';
+import {Learning,seededRandom,shuffle,sameSelection,cleanRows,passingRows,payload,csv,validateContent} from './core.mjs?v=ng4_web_v5';
 
 const $=selector=>document.querySelector(selector);
 const content=$('#content'),footer=$('#footer'),notes=$('#notes'),root=$('#experiment');
@@ -12,10 +12,10 @@ let timing=null,pageEpoch=0;
 const held=new Set();
 const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function rich(s){return esc(s).replace(/\b(Pog|Gom|Jup|Zok|Lod|Powers?|powers?|multipliers?)\b/g,'<strong class="power">$1</strong>')
+function rich(s){return esc(s).replace(/\b(Pog|Gom|Jop|Zok|Lod|Powers?|powers?|multipliers?)\b/g,'<strong class="power">$1</strong>')
   .replace(/\b(Fim|Miv|Digits?|digits?)\b/g,'<strong class="digit">$1</strong>');}
 const prose=(s,styled=true)=>String(s).split(/\n\s*\n/).map(p=>'<p>'+(styled?rich(p):esc(p)).replaceAll('\n','<br>')+'</p>').join('');
-const keyLegend=()=>'<div class="response-keys"><span>Press <kbd>S</kbd> for Yes</span><span><kbd>K</kbd> for No</span></div>';
+const keyLegend=(magnitude=false)=>'<div class="response-keys"><span>Press <kbd>S</kbd> for '+(magnitude?'Correct':'Yes')+'</span><span><kbd>K</kbd> for '+(magnitude?'Incorrect':'No')+'</span></div>';
 const nextLabel='(Right Key for Continue)',backLabel='(Left Key for Back)';
 
 document.addEventListener('keydown',event=>{
@@ -101,7 +101,7 @@ function record(row){rows.push(row);persist();}
 async function wait(ms,fixation=false){draw(fixation?'<div class="fixation">+</div>':'');root.dataset.stage='fixation';await sleep(ms);}
 function timedQuestion(trial){
   draw(trial.phase==='judgment'?prose(spec.judgment_prompt)+'<div class="stimulus">'+rich(trial.stimulus)+'</div>':
-    '<div class="comparison">'+rich(trial.stimulus)+'</div>',{keys:keyLegend()});
+    '<div class="comparison">'+rich(trial.stimulus)+'</div>',{keys:keyLegend(trial.phase!=='judgment')});
   root.dataset.stage=trial.phase==='judgment'?'judgment':'learning';
   return new Promise(resolve=>{
     timing={onset_ms:null,focus_losses:0,hidden_during_trial:document.hidden,rt_valid:!document.hidden};
