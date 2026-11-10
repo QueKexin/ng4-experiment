@@ -88,7 +88,7 @@ async function comprehension(){
         condition:'instruction_check',correct_key:q.correct.map(j=>q.options[j]).join('; '),
         response:[...selection].sort((a,b)=>a-b).map(j=>q.options[j]).join('; '),correct:Number(correct),
         rt_seconds:(performance.now()-onset)/1000});
-      if(!correct)await page('<p>Please read the question again.</p>');
+      if(!correct)await page('<p>Please review the Notes and read the question carefully before trying again.</p>',{note:'Digits: Fim ? Miv\n'+spec.power_order});
     }
   }
 }
