@@ -1,5 +1,5 @@
 {
-  "version": "ng4_web_v1",
+  "version": "ng4_web_v2",
   "powers": [
     "Pog",
     "Gom",
@@ -96,7 +96,7 @@
       ]
     }
   ],
-  "magnitude_instructions": "We have a series of trials to assess your understanding of the Numerons’ number system. Study the relative magnitudes of the Numerons’ words—for example, Lod is greater than Zok.\n\nOn the next pages, you will see questions such as “Is Lod greater than Zok?” Press S for Yes or K for No. Make each judgment as quickly and accurately as you can.\n\nStudy the ordering in the Notes below. When you have memorized the relative magnitudes of the Powers, press Right Arrow to continue.",
+  "magnitude_instructions": "As a professional anthropologist, you must demonstrate your understanding of the Numerons’ number language by answering 20 magnitude comparisons correctly in a row. Study the relative magnitudes of the Numerons’ words—for example, Lod is greater than Zok.\n\nOn the next pages, you will see questions such as “Is Lod greater than Zok?” Press S for Yes or K for No. Make each judgment as quickly and accurately as you can.\n\nStudy the ordering in the Notes below. When you have memorized the relative magnitudes of the Powers, press Right Arrow to continue.",
   "task_pages": [
     {
       "body": "Starting on the next page, you will see one number expression at a time. Your job is to decide whether it is a real number word in the Numerons’ language. In your own native language, for example, not all combinations of number words when placed together form another number word. If X is a number word and Y is a number word, the combinations XX, YY, XY, and YX may or may not be number words. Only certain combinations are real number words.",
@@ -1268,5 +1268,5 @@
       }
     ]
   },
-  "content_sha256": "d45048ff556458ebd9095590dc3ee19c0cd906dd55bdc5bea95793427e762267"
+  "content_sha256": "52d3ef8c98bd06f4820f090ddcb216f21a928e4e5b165af2778fc05b97815b6d"
 }

@@ -14,7 +14,7 @@ const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function rich(s){return esc(s).replace(/\b(Pog|Gom|Jup|Zok|Lod|Powers?|powers?|multipliers?)\b/g,'<strong class="power">$1</strong>')
   .replace(/\b(Fim|Miv|Digits?|digits?)\b/g,'<strong class="digit">$1</strong>');}
-const prose=s=>String(s).split(/\n\s*\n/).map(p=>'<p>'+rich(p).replaceAll('\n','<br>')+'</p>').join('');
+const prose=(s,styled=true)=>String(s).split(/\n\s*\n/).map(p=>'<p>'+(styled?rich(p):esc(p)).replaceAll('\n','<br>')+'</p>').join('');
 const keyLegend=()=>'<div class="response-keys"><span>Press <kbd>S</kbd> for Yes</span><span><kbd>K</kbd> for No</span></div>';
 const nextLabel='(Right Key for Continue)',backLabel='(Left Key for Back)';
 
@@ -66,9 +66,9 @@ async function comprehension(){
     const q=spec.comprehension[i];let correct=false;
     while(!correct){
       const multiple=q.correct.length>1;
-      draw(prose(q.prompt)+'<div class="choices">'+q.options.map((option,j)=>
+      draw(prose(q.prompt,false)+'<div class="choices">'+q.options.map((option,j)=>
         '<label class="choice"><span class="option-number">'+(j+1)+'</span><input type="'+(multiple?'checkbox':'radio')+
-        '" name="answer" value="'+j+'">'+rich(option)+'</label>').join('')+'</div>',
+        '" name="answer" value="'+j+'">'+esc(option)+'</label>').join('')+'</div>',
         {footerHTML:'<p class="hint">Number keys to select'+(multiple?' all that apply':'')+'; Right Arrow to submit.</p>'+navigate()});
       root.dataset.stage='comprehension';const onset=performance.now();
       const selection=await new Promise(resolve=>{
