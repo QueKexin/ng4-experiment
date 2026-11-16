@@ -28,3 +28,7 @@ textarea.field{min-height:160px;resize:vertical}.form-actions{display:flex;gap:1
 .error{color:#a52c26;font-size:20px}.status{font-size:20px}.download-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:25px 0}
 [hidden]{display:none!important}
 @media(max-width:850px){:root{font-size:21px}#experiment{padding:40px 25px 22px}.navigation button{font-size:17px}#notes{font-size:20px}.response-keys{font-size:22px}}
+
+.instruction-key-icons{margin:18px auto;}
+
+.celebration{font-size:clamp(52px,7vw,86px);font-weight:700;line-height:1.25}.celebration-icon{display:block;font-size:clamp(76px,10vw,120px);margin-bottom:24px}

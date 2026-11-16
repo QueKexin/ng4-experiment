@@ -1,4 +1,4 @@
-import {Learning,seededRandom,shuffle,sameSelection,cleanRows,passingRows,payload,csv,validateContent} from './core.mjs?v=ng4_web_v5';
+import {Learning,seededRandom,shuffle,sameSelection,cleanRows,passingRows,payload,csv,validateContent} from './core.mjs?v=ng4_web_v12_local';
 
 const $=selector=>document.querySelector(selector);
 const content=$('#content'),footer=$('#footer'),notes=$('#notes'),root=$('#experiment');
@@ -12,10 +12,11 @@ let timing=null,pageEpoch=0;
 const held=new Set();
 const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function rich(s){return esc(s).replace(/\b(Pog|Gom|Jop|Zok|Lod|Powers?|powers?|multipliers?)\b/g,'<strong class="power">$1</strong>')
-  .replace(/\b(Fim|Miv|Digits?|digits?)\b/g,'<strong class="digit">$1</strong>');}
+function rich(s){return esc(s).replace(/\b(Pog|Gom|Jop|Zok|Lod|Powers?|powers?)\b/gi,'<strong class="power">$1</strong>')
+  .replace(/\b(Fim|Miv|Digits?|digits?)\b/gi,'<strong class="digit">$1</strong>').replace(/\bRight Key\b/g,'<strong>Right Key</strong>');}
 const prose=(s,styled=true)=>String(s).split(/\n\s*\n/).map(p=>'<p>'+(styled?rich(p):esc(p)).replaceAll('\n','<br>')+'</p>').join('');
-const keyLegend=(magnitude=false)=>'<div class="response-keys"><span>Press <kbd>S</kbd> for '+(magnitude?'Correct':'Yes')+'</span><span><kbd>K</kbd> for '+(magnitude?'Incorrect':'No')+'</span></div>';
+const keyLegend=(magnitude=false)=>'<div class="response-keys"><span>Press <kbd>'+'J'+'</kbd> for '+(magnitude?'Correct':'Yes')+'</span><span><kbd>K</kbd> for '+(magnitude?'Incorrect':'No')+'</span></div>';
+const magnitudeInstructionKeys=()=>'<span class="response-keys instruction-key-icons"><span><kbd>J</kbd> Correct</span><span><kbd>K</kbd> Incorrect</span></span>';
 const nextLabel='(Right Key for Continue)',backLabel='(Left Key for Back)';
 
 document.addEventListener('keydown',event=>{
@@ -54,9 +55,12 @@ function page(html,{note='',back=false,keys=''}={}){
 async function pages(items){
   let index=0;
   while(index<items.length){const item=items[index];
-    const body=item.body.replace('Press S for Yes or K for No.','').trim();
-    const direction=await page(prose(body),{note:item.notes??'',back:index>0,
-      keys:item.body.includes('Press S for Yes or K for No.')?keyLegend():''});
+    const body=item.body.replace('Press J for Yes or K for No.','').trim();
+    let instructionHTML=prose(body,item.semantic_colors!==false).replace('Press J for Correct or K for Incorrect.','Press J for Correct or K for Incorrect.'+magnitudeInstructionKeys());
+    for(const sentence of item.emphasize??[])instructionHTML=instructionHTML.replace(rich(sentence),'<strong>'+rich(sentence)+'</strong>');
+    if(item.celebration)instructionHTML='<div class="celebration"><span class="celebration-icon" aria-hidden="true">👍</span><p>Good job!</p></div>';
+    const direction=await page(instructionHTML,{note:item.notes??'',back:index>0,
+      keys:item.body.includes('Press J for Yes or K for No.')?keyLegend():''});
     index=direction==='left'?Math.max(0,index-1):index+1;
   }
 }
@@ -69,7 +73,7 @@ async function comprehension(){
       draw(prose(q.prompt,false)+'<div class="choices">'+q.options.map((option,j)=>
         '<label class="choice"><span class="option-number">'+(j+1)+'</span><input type="'+(multiple?'checkbox':'radio')+
         '" name="answer" value="'+j+'">'+esc(option)+'</label>').join('')+'</div>',
-        {footerHTML:'<p class="hint">Number keys to select'+(multiple?' all that apply':'')+'; Right Arrow to submit.</p>'+navigate()});
+        {footerHTML:'<p class="hint">Number keys to select'+(multiple?' all that apply':'')+'; Right Key to submit.</p>'+navigate()});
       root.dataset.stage='comprehension';const onset=performance.now();
       const selection=await new Promise(resolve=>{
         const finish=()=>{const selected=new Set([...document.querySelectorAll('input:checked')].map(el=>Number(el.value)));
@@ -94,15 +98,16 @@ async function comprehension(){
 }
 function persist(){
   try{sessionStorage.setItem('ng4-active-session',JSON.stringify({meta,rows,answers,
-    learning:learning?{block:learning.block,attempts:learning.attempts,failed:learning.failed,passed:learning.passed}:null}));}
+    learning:learning?{block:learning.block,attempts:learning.attempts,failed:learning.failed,errors:learning.errors,requiredCorrect:learning.requiredCorrect,minAccuracy:learning.minAccuracy,passed:learning.passed}:null}));}
   catch(error){console.warn('Session backup unavailable:',error.name);}
 }
 function record(row){rows.push(row);persist();}
 async function wait(ms,fixation=false){draw(fixation?'<div class="fixation">+</div>':'');root.dataset.stage='fixation';await sleep(ms);}
 function timedQuestion(trial){
-  draw(trial.phase==='judgment'?prose(spec.judgment_prompt)+'<div class="stimulus">'+rich(trial.stimulus)+'</div>':
-    '<div class="comparison">'+rich(trial.stimulus)+'</div>',{keys:keyLegend(trial.phase!=='judgment')});
-  root.dataset.stage=trial.phase==='judgment'?'judgment':'learning';
+  const judgment=trial.phase==='judgment'||trial.phase==='english_judgment';
+  draw(judgment?prose(trial.phase==='english_judgment'?spec.english_prompt:spec.judgment_prompt)+'<div class="stimulus">'+rich(trial.stimulus)+'</div>':
+    '<div class="comparison">'+rich(trial.stimulus)+'</div>',{keys:keyLegend(!judgment)});
+  root.dataset.stage=judgment?trial.phase:'learning';
   return new Promise(resolve=>{
     timing={onset_ms:null,focus_losses:0,hidden_during_trial:document.hidden,rt_valid:!document.hidden};
     // The rAF immediately preceding the stimulus paint defines browser stimulus onset.
@@ -110,7 +115,8 @@ function timedQuestion(trial){
     requestAnimationFrame(()=>{
       timing.onset_ms=performance.now();
       activeKeys=(event,key)=>{
-        if(key!=='s'&&key!=='k')return false;
+        const positive='j';
+        if(key!==positive&&key!=='k')return false;
         const now=performance.now();const eventTime=event.timeStamp;
         const responseTime=eventTime>=timing.onset_ms&&eventTime<=now+2?eventTime:now;
         const result={response:key,rt_seconds:(responseTime-timing.onset_ms)/1000,...timing};
@@ -121,7 +127,7 @@ function timedQuestion(trial){
   });
 }
 async function incorrect(){
-  draw('<p class="incorrect">Incorrect</p><p class="feedback-order">'+rich(spec.power_order)+'</p>',
+  draw('<p class="incorrect">Incorrect. Please study them carefully:</p><p class="feedback-order">'+rich(spec.power_order)+'</p>',
     {footerHTML:'<p class="hint">Press any key to go to the next page.</p>'});
   root.dataset.stage='incorrect';
   await new Promise(resolve=>{
@@ -131,7 +137,7 @@ async function incorrect(){
   });
 }
 async function learn(){
-  learning=new Learning(spec.comparisons,seededRandom(meta.seed^0x4E4734));
+  learning=new Learning(spec.comparisons,seededRandom(meta.seed^0x4E4734),spec.config.learning_min_accuracy);
   while(!learning.passed){
     const trial=learning.current();await wait(spec.config.fixation_seconds*1000,true);
     const response=await timedQuestion(trial);const row=learning.answer(response.response);
@@ -142,8 +148,8 @@ async function learn(){
   }
   persist();
 }
-async function judgments(){
-  const order=shuffle(spec.judgments,seededRandom(meta.seed^0x6A756467));
+async function judgments(english=false){
+  const order=shuffle(english?spec.english_judgments:spec.judgments,seededRandom(meta.seed^(english?0x454E47:0x6A756467)));
   for(let i=0;i<order.length;i++){
     const trial=order[i];await wait(spec.config.fixation_seconds*1000,true);
     const response=await timedQuestion(trial);
@@ -164,11 +170,12 @@ function fieldFor(q){
 async function demographics(){
   await page(prose(spec.demographics.intro));
   for(const q of spec.demographics.questions){
+    const required=q.required!==false&&q.id!=='major';
     draw(prose(q.prompt)+'<form id="demographic-form">'+fieldFor(q)+'<p class="error" id="validation" role="alert"></p>'+
-      '<div class="form-actions"><button id="skip" type="button">Skip</button><button type="submit">Continue →</button></div></form>');
+      '<div class="form-actions">'+(required?'':'<button id="skip" type="button">Skip</button>')+'<button type="submit">Continue →</button></div></form>');
     root.dataset.stage='demographics';
     const answer=await new Promise(resolve=>{
-      $('#skip').onclick=()=>resolve({status:'skipped',value:'',code:'',other:''});
+      if($('#skip'))$('#skip').onclick=()=>resolve({status:'skipped',value:'',code:'',other:''});
       document.querySelectorAll('input[name="demographic"]').forEach(el=>el.onchange=()=>{
         if($('#other'))$('#other').hidden=Number(el.value)!==q.other_code;
         document.querySelectorAll('.choice').forEach(label=>label.classList.toggle('selected',label.querySelector('input').checked));
@@ -177,13 +184,14 @@ async function demographics(){
         event.preventDefault();let code='',value='',other='';
         if(['choice','dropdown'].includes(q.type)){
           const selected=q.type==='choice'?document.querySelector('input[name="demographic"]:checked'):$('#answer');
-          if(!selected||!selected.value){$('#validation').textContent='Please choose an answer or select Skip.';return;}
+          if(!selected||!selected.value){$('#validation').textContent='Please choose an answer.';return;}
           code=Number(selected.value);value=q.options.find(([k])=>k===code)[1];
-          if(code===q.other_code){other=$('#other').value.trim();if(!other){$('#validation').textContent='Please specify your language, or select Skip.';return;}}
+          if(code===q.other_code){other=$('#other').value.trim();if(!other){$('#validation').textContent='Please specify your language.';return;}}
         }else{
           value=$('#answer').value.trim();
+          if(required&&!value){$('#validation').textContent='Please answer this question before continuing.';return;}
           if(value&&q.type==='integer'){
-            if(!/^\d+$/.test(value)||Number(value)<1){$('#validation').textContent='Please enter your age in whole years, or select Skip.';return;}
+            if(!/^\d+$/.test(value)||Number(value)<1){$('#validation').textContent='Please enter your age in whole years.';return;}
             value=Number(value);
           }
         }
@@ -241,7 +249,7 @@ async function run(){
   await pages([...spec.instruction_pages,{body:spec.comprehension_intro}]);
   await comprehension();
   await pages([{body:spec.magnitude_instructions,notes:spec.power_order}]);
-  await learn();await pages(spec.task_pages);await judgments();await demographics();await finish();
+  await learn();await pages(spec.task_pages);await judgments();await pages(spec.english_instruction_pages);await judgments(true);await demographics();await finish();
 }
 function showRecoveredBackup(backup){
   let saved;try{saved=JSON.parse(backup);}catch{saved=null;}

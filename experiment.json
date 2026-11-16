@@ -1,5 +1,5 @@
 {
-  "version": "ng4_web_v5",
+  "version": "ng4_web_v12_local",
   "powers": [
     "Pog",
     "Gom",
@@ -10,7 +10,7 @@
   "power_order": "Powers: Pog < Gom < Jop < Zok < Lod",
   "instruction_pages": [
     {
-      "body": "In this experiment, we’d like you to pretend that you are an anthropologist studying an alien group called the Numerons. Your job is to figure out some aspects of the Numerons’ number language.\n\nBelow are some things you’ve already discovered about their number language. Please study them carefully.",
+      "body": "In this experiment, we’d like you to pretend that you are an anthropologist studying alien languages. This time, you have been assigned to study a population called the Numerons. Your job is to figure out some aspects of the Numerons’ number language.\n\nBelow are some things you’ve already discovered about their number language. Please study them carefully.",
       "notes": ""
     },
     {
@@ -38,7 +38,7 @@
       "notes": ""
     }
   ],
-  "comprehension_intro": "Below are some questions to check your understanding of the Numeron's language.\n\nUse the number keys to select your answer or answers, then press Right Arrow to submit.",
+  "comprehension_intro": "Below are some questions to check your understanding of the Numeron's language.\n\nUse the number keys to select your answer or answers, then press Right Key to submit.",
   "comprehension": [
     {
       "prompt": "Which ones are like “one,” “two,” and “three” … in English?",
@@ -96,14 +96,14 @@
       ]
     }
   ],
-  "magnitude_instructions": "As a professional anthropologist, you must demonstrate your understanding of the Numerons’ number language by answering 20 magnitude comparisons correctly in a row.\n\nOn the next pages, you will see statements such as “Lod > Zok.” Press S for Correct or K for Incorrect. Make each judgment as quickly and accurately as you can.\n\nStudy the relative magnitudes of the Numerons’ words—for example, Lod is greater than Zok. When you have memorized the relative magnitudes of the Powers, press Right Arrow to continue.",
+  "magnitude_instructions": "As a professional anthropologist, you must demonstrate your understanding of the Numerons’ number language. Each block contains 20 magnitude comparisons in a random order. To move on to the next phase, you must answer at least 18 out of 20 correctly (90% accuracy). If you score below 90%, you will repeat the same 20 comparisons in a new random order. Please do not take notes or use other aids; try to memorize the relative magnitudes instead.\n\nOn the next pages, you will see statements such as “Lod > Zok.” Press J for Correct or K for Incorrect. Make each judgment as quickly and accurately as you can.\n\nStudy the relative magnitudes of the Numerons’ words—for example, Lod is greater than Zok. When you have memorized the relative magnitudes of the Powers, press Right Key to continue.",
   "task_pages": [
     {
       "body": "Starting on the next page, you will see one number expression at a time. Your job is to decide whether it is a real number word in the Numerons’ language. In your own native language, for example, not all combinations of number words when placed together form another number word. If X is a number word and Y is a number word, the combinations XX, YY, XY, and YX may or may not be number words. Only certain combinations are real number words.",
       "notes": ""
     },
     {
-      "body": "Please remember to study them carefully and then decide if they are a real number word. \n\nPress S for Yes or K for No. Respond as quickly as you can while trying to be correct.\n\nThe first trial starts in the next page.",
+      "body": "Please remember to study them carefully and then decide if they are a real number word. \n\nPress J for Yes or K for No. Respond as quickly as you can while trying to be correct.\n\nThe first trial starts in the next page.",
       "notes": ""
     }
   ],
@@ -116,7 +116,7 @@
       "condition": "magnitude",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "s"
+      "correct_key": "j"
     },
     {
       "phase": "comparison",
@@ -134,7 +134,7 @@
       "condition": "magnitude",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "s"
+      "correct_key": "j"
     },
     {
       "phase": "comparison",
@@ -152,7 +152,7 @@
       "condition": "magnitude",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "s"
+      "correct_key": "j"
     },
     {
       "phase": "comparison",
@@ -170,7 +170,7 @@
       "condition": "magnitude",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "s"
+      "correct_key": "j"
     },
     {
       "phase": "comparison",
@@ -188,7 +188,7 @@
       "condition": "magnitude",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "s"
+      "correct_key": "j"
     },
     {
       "phase": "comparison",
@@ -206,7 +206,7 @@
       "condition": "magnitude",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "s"
+      "correct_key": "j"
     },
     {
       "phase": "comparison",
@@ -224,7 +224,7 @@
       "condition": "magnitude",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "s"
+      "correct_key": "j"
     },
     {
       "phase": "comparison",
@@ -242,7 +242,7 @@
       "condition": "magnitude",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "s"
+      "correct_key": "j"
     },
     {
       "phase": "comparison",
@@ -260,7 +260,7 @@
       "condition": "magnitude",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "s"
+      "correct_key": "j"
     },
     {
       "phase": "comparison",
@@ -278,7 +278,7 @@
       "condition": "magnitude",
       "distance": 4,
       "document_distance": 4,
-      "correct_key": "s"
+      "correct_key": "j"
     },
     {
       "phase": "comparison",
@@ -298,7 +298,7 @@
       "condition": "syntax_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "s",
+      "correct_key": "j",
       "power_pair": "Pog Gom",
       "digit_order": "Fim Miv",
       "table_row": 1,
@@ -337,7 +337,7 @@
       "condition": "syntax_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "s",
+      "correct_key": "j",
       "power_pair": "Pog Gom",
       "digit_order": "Miv Fim",
       "table_row": 2,
@@ -376,7 +376,7 @@
       "condition": "syntax_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "s",
+      "correct_key": "j",
       "power_pair": "Gom Jop",
       "digit_order": "Fim Miv",
       "table_row": 3,
@@ -415,7 +415,7 @@
       "condition": "syntax_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "s",
+      "correct_key": "j",
       "power_pair": "Gom Jop",
       "digit_order": "Miv Fim",
       "table_row": 4,
@@ -454,7 +454,7 @@
       "condition": "syntax_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "s",
+      "correct_key": "j",
       "power_pair": "Jop Zok",
       "digit_order": "Fim Miv",
       "table_row": 5,
@@ -493,7 +493,7 @@
       "condition": "syntax_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "s",
+      "correct_key": "j",
       "power_pair": "Jop Zok",
       "digit_order": "Miv Fim",
       "table_row": 6,
@@ -532,7 +532,7 @@
       "condition": "syntax_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "s",
+      "correct_key": "j",
       "power_pair": "Zok Lod",
       "digit_order": "Fim Miv",
       "table_row": 7,
@@ -571,7 +571,7 @@
       "condition": "syntax_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "s",
+      "correct_key": "j",
       "power_pair": "Zok Lod",
       "digit_order": "Miv Fim",
       "table_row": 8,
@@ -610,7 +610,7 @@
       "condition": "syntax_packing",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "s",
+      "correct_key": "j",
       "power_pair": "Pog Jop",
       "digit_order": "Fim Miv",
       "table_row": 9,
@@ -649,7 +649,7 @@
       "condition": "syntax_packing",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "s",
+      "correct_key": "j",
       "power_pair": "Pog Jop",
       "digit_order": "Miv Fim",
       "table_row": 10,
@@ -688,7 +688,7 @@
       "condition": "syntax_packing",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "s",
+      "correct_key": "j",
       "power_pair": "Gom Zok",
       "digit_order": "Fim Miv",
       "table_row": 11,
@@ -727,7 +727,7 @@
       "condition": "syntax_packing",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "s",
+      "correct_key": "j",
       "power_pair": "Gom Zok",
       "digit_order": "Miv Fim",
       "table_row": 12,
@@ -766,7 +766,7 @@
       "condition": "syntax_packing",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "s",
+      "correct_key": "j",
       "power_pair": "Jop Lod",
       "digit_order": "Fim Miv",
       "table_row": 13,
@@ -805,7 +805,7 @@
       "condition": "syntax_packing",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "s",
+      "correct_key": "j",
       "power_pair": "Jop Lod",
       "digit_order": "Miv Fim",
       "table_row": 14,
@@ -844,7 +844,7 @@
       "condition": "syntax_packing",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "s",
+      "correct_key": "j",
       "power_pair": "Pog Zok",
       "digit_order": "Fim Miv",
       "table_row": 15,
@@ -883,7 +883,7 @@
       "condition": "syntax_packing",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "s",
+      "correct_key": "j",
       "power_pair": "Pog Zok",
       "digit_order": "Miv Fim",
       "table_row": 16,
@@ -922,7 +922,7 @@
       "condition": "syntax_packing",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "s",
+      "correct_key": "j",
       "power_pair": "Gom Lod",
       "digit_order": "Fim Miv",
       "table_row": 17,
@@ -961,7 +961,7 @@
       "condition": "syntax_packing",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "s",
+      "correct_key": "j",
       "power_pair": "Gom Lod",
       "digit_order": "Miv Fim",
       "table_row": 18,
@@ -1000,7 +1000,7 @@
       "condition": "syntax_packing",
       "distance": 4,
       "document_distance": 4,
-      "correct_key": "s",
+      "correct_key": "j",
       "power_pair": "Pog Lod",
       "digit_order": "Fim Miv",
       "table_row": 19,
@@ -1039,7 +1039,7 @@
       "condition": "syntax_packing",
       "distance": 4,
       "document_distance": 4,
-      "correct_key": "s",
+      "correct_key": "j",
       "power_pair": "Pog Lod",
       "digit_order": "Miv Fim",
       "table_row": 20,
@@ -1072,6 +1072,464 @@
       "stimulus_set": "five_powers_ten_pairs_jop_v3"
     }
   ],
+  "english_instruction_pages": [
+    {
+      "body": "👍\n\nGood job!",
+      "notes": "",
+      "emphasize": [
+        "Quadrillion is the largest known single-word power in this language."
+      ],
+      "celebration": true,
+      "semantic_colors": false
+    },
+    {
+      "body": "Your new task is to study a novel language that borrows words from English to express numbers.\n\nSo far, you have discovered seven power words in this language, ordered from smallest to largest:\n\nten < hundred < thousand < million < billion < trillion < quadrillion\n\nThese words have the same numerical values as in English. Quadrillion is the largest known single-word power in this language. No single-word powers for larger values have been discovered.",
+      "notes": "",
+      "emphasize": [
+        "Quadrillion is the largest known single-word power in this language."
+      ],
+      "celebration": false,
+      "semantic_colors": false
+    },
+    {
+      "body": "In the following pages, you will see expressions constructed from these powers and the digits “six” and “seven”. Based on the information above, judge whether each expression is a real number word in this novel language.\n\nPress J for Yes or K for No. Respond as quickly and accurately as you can.",
+      "notes": "",
+      "emphasize": [
+        "Quadrillion is the largest known single-word power in this language."
+      ],
+      "celebration": false,
+      "semantic_colors": false
+    }
+  ],
+  "english_prompt": "Is the expression below a real number word in this novel language?",
+  "english_power_order": [
+    "ten",
+    "hundred",
+    "thousand",
+    "million",
+    "billion",
+    "trillion",
+    "quadrillion"
+  ],
+  "english_trial_count": 32,
+  "english_judgments": [
+    {
+      "phase": "english_judgment",
+      "trial_id": "E01",
+      "stimulus": "six hundred thousand seven",
+      "condition": "syntax_packing",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "j",
+      "power_pair": "hundred thousand",
+      "digit_order": "six seven",
+      "table_row": 1,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E02",
+      "stimulus": "six thousand hundred seven",
+      "condition": "no_packing",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "k",
+      "power_pair": "hundred thousand",
+      "digit_order": "six seven",
+      "table_row": 1,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E03",
+      "stimulus": "hundred thousand six seven",
+      "condition": "no_syntax",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "k",
+      "power_pair": "hundred thousand",
+      "digit_order": "six seven",
+      "table_row": 1,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E04",
+      "stimulus": "seven hundred thousand six",
+      "condition": "syntax_packing",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "j",
+      "power_pair": "hundred thousand",
+      "digit_order": "seven six",
+      "table_row": 2,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E05",
+      "stimulus": "seven thousand hundred six",
+      "condition": "no_packing",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "k",
+      "power_pair": "hundred thousand",
+      "digit_order": "seven six",
+      "table_row": 2,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E06",
+      "stimulus": "hundred thousand seven six",
+      "condition": "no_syntax",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "k",
+      "power_pair": "hundred thousand",
+      "digit_order": "seven six",
+      "table_row": 2,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E07",
+      "stimulus": "six hundred million seven",
+      "condition": "syntax_packing",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "j",
+      "power_pair": "hundred million",
+      "digit_order": "six seven",
+      "table_row": 3,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E08",
+      "stimulus": "six million hundred seven",
+      "condition": "no_packing",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "k",
+      "power_pair": "hundred million",
+      "digit_order": "six seven",
+      "table_row": 3,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E09",
+      "stimulus": "hundred million six seven",
+      "condition": "no_syntax",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "k",
+      "power_pair": "hundred million",
+      "digit_order": "six seven",
+      "table_row": 3,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E10",
+      "stimulus": "seven hundred million six",
+      "condition": "syntax_packing",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "j",
+      "power_pair": "hundred million",
+      "digit_order": "seven six",
+      "table_row": 4,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E11",
+      "stimulus": "seven million hundred six",
+      "condition": "no_packing",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "k",
+      "power_pair": "hundred million",
+      "digit_order": "seven six",
+      "table_row": 4,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E12",
+      "stimulus": "hundred million seven six",
+      "condition": "no_syntax",
+      "distance": 2,
+      "document_distance": 2,
+      "correct_key": "k",
+      "power_pair": "hundred million",
+      "digit_order": "seven six",
+      "table_row": 4,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E13",
+      "stimulus": "six hundred billion seven",
+      "condition": "syntax_packing",
+      "distance": 3,
+      "document_distance": 3,
+      "correct_key": "j",
+      "power_pair": "hundred billion",
+      "digit_order": "six seven",
+      "table_row": 5,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E14",
+      "stimulus": "six billion hundred seven",
+      "condition": "no_packing",
+      "distance": 3,
+      "document_distance": 3,
+      "correct_key": "k",
+      "power_pair": "hundred billion",
+      "digit_order": "six seven",
+      "table_row": 5,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E15",
+      "stimulus": "hundred billion six seven",
+      "condition": "no_syntax",
+      "distance": 3,
+      "document_distance": 3,
+      "correct_key": "k",
+      "power_pair": "hundred billion",
+      "digit_order": "six seven",
+      "table_row": 5,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E16",
+      "stimulus": "seven hundred billion six",
+      "condition": "syntax_packing",
+      "distance": 3,
+      "document_distance": 3,
+      "correct_key": "j",
+      "power_pair": "hundred billion",
+      "digit_order": "seven six",
+      "table_row": 6,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E17",
+      "stimulus": "seven billion hundred six",
+      "condition": "no_packing",
+      "distance": 3,
+      "document_distance": 3,
+      "correct_key": "k",
+      "power_pair": "hundred billion",
+      "digit_order": "seven six",
+      "table_row": 6,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E18",
+      "stimulus": "hundred billion seven six",
+      "condition": "no_syntax",
+      "distance": 3,
+      "document_distance": 3,
+      "correct_key": "k",
+      "power_pair": "hundred billion",
+      "digit_order": "seven six",
+      "table_row": 6,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E19",
+      "stimulus": "six hundred trillion seven",
+      "condition": "syntax_packing",
+      "distance": 4,
+      "document_distance": 4,
+      "correct_key": "j",
+      "power_pair": "hundred trillion",
+      "digit_order": "six seven",
+      "table_row": 7,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E20",
+      "stimulus": "six trillion hundred seven",
+      "condition": "no_packing",
+      "distance": 4,
+      "document_distance": 4,
+      "correct_key": "k",
+      "power_pair": "hundred trillion",
+      "digit_order": "six seven",
+      "table_row": 7,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E21",
+      "stimulus": "hundred trillion six seven",
+      "condition": "no_syntax",
+      "distance": 4,
+      "document_distance": 4,
+      "correct_key": "k",
+      "power_pair": "hundred trillion",
+      "digit_order": "six seven",
+      "table_row": 7,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E22",
+      "stimulus": "seven hundred trillion six",
+      "condition": "syntax_packing",
+      "distance": 4,
+      "document_distance": 4,
+      "correct_key": "j",
+      "power_pair": "hundred trillion",
+      "digit_order": "seven six",
+      "table_row": 8,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E23",
+      "stimulus": "seven trillion hundred six",
+      "condition": "no_packing",
+      "distance": 4,
+      "document_distance": 4,
+      "correct_key": "k",
+      "power_pair": "hundred trillion",
+      "digit_order": "seven six",
+      "table_row": 8,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E24",
+      "stimulus": "hundred trillion seven six",
+      "condition": "no_syntax",
+      "distance": 4,
+      "document_distance": 4,
+      "correct_key": "k",
+      "power_pair": "hundred trillion",
+      "digit_order": "seven six",
+      "table_row": 8,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E25",
+      "stimulus": "six hundred quadrillion seven",
+      "condition": "syntax_packing",
+      "distance": 5,
+      "document_distance": 5,
+      "correct_key": "j",
+      "power_pair": "hundred quadrillion",
+      "digit_order": "six seven",
+      "table_row": 9,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E26",
+      "stimulus": "six quadrillion hundred seven",
+      "condition": "no_packing",
+      "distance": 5,
+      "document_distance": 5,
+      "correct_key": "k",
+      "power_pair": "hundred quadrillion",
+      "digit_order": "six seven",
+      "table_row": 9,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E27",
+      "stimulus": "hundred quadrillion six seven",
+      "condition": "no_syntax",
+      "distance": 5,
+      "document_distance": 5,
+      "correct_key": "k",
+      "power_pair": "hundred quadrillion",
+      "digit_order": "six seven",
+      "table_row": 9,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E28",
+      "stimulus": "seven hundred quadrillion six",
+      "condition": "syntax_packing",
+      "distance": 5,
+      "document_distance": 5,
+      "correct_key": "j",
+      "power_pair": "hundred quadrillion",
+      "digit_order": "seven six",
+      "table_row": 10,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E29",
+      "stimulus": "seven quadrillion hundred six",
+      "condition": "no_packing",
+      "distance": 5,
+      "document_distance": 5,
+      "correct_key": "k",
+      "power_pair": "hundred quadrillion",
+      "digit_order": "seven six",
+      "table_row": 10,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E30",
+      "stimulus": "hundred quadrillion seven six",
+      "condition": "no_syntax",
+      "distance": 5,
+      "document_distance": 5,
+      "correct_key": "k",
+      "power_pair": "hundred quadrillion",
+      "digit_order": "seven six",
+      "table_row": 10,
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E31",
+      "stimulus": "six hundred ten seven",
+      "condition": "catch",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "k",
+      "power_pair": "ten hundred",
+      "digit_order": "six seven",
+      "table_row": "",
+      "stimulus_set": "english_hundred_32_v2"
+    },
+    {
+      "phase": "english_judgment",
+      "trial_id": "E32",
+      "stimulus": "seven hundred ten six",
+      "condition": "catch",
+      "distance": 1,
+      "document_distance": 1,
+      "correct_key": "k",
+      "power_pair": "ten hundred",
+      "digit_order": "seven six",
+      "table_row": "",
+      "stimulus_set": "english_hundred_32_v2"
+    }
+  ],
   "config": {
     "fixation_seconds": 0.5,
     "intertrial_seconds": 0.25,
@@ -1079,18 +1537,20 @@
     "show_bonus_statement": false,
     "bonus_threshold": 0.8,
     "description": "Bonus wording is disabled. This program does not issue payments.",
-    "learning_consecutive_correct": 20,
     "correct_border_seconds": 0.4,
-    "learning_pass_rule": "restart_on_error_perfect_block"
+    "learning_pass_rule": "complete_block_accuracy",
+    "learning_block_size": 20,
+    "learning_min_accuracy": 0.9
   },
   "demographics": {
-    "questionnaire_version": "nine_questions_v2",
+    "questionnaire_version": "nine_questions_v3_required",
     "intro": "Thank you for participating in this experiment. We have a few final questions about your background.",
     "questions": [
       {
         "id": "age",
         "type": "integer",
-        "prompt": "What is your age in years?"
+        "prompt": "What is your age in years?",
+        "required": true
       },
       {
         "id": "gender",
@@ -1117,7 +1577,8 @@
             5,
             "I don’t want to answer"
           ]
-        ]
+        ],
+        "required": true
       },
       {
         "id": "language",
@@ -1133,7 +1594,8 @@
             "Other (please specify)"
           ]
         ],
-        "other_code": 2
+        "other_code": 2,
+        "required": true
       },
       {
         "id": "second_language",
@@ -1149,17 +1611,20 @@
             "Yes (please specify)"
           ]
         ],
-        "other_code": 2
+        "other_code": 2,
+        "required": true
       },
       {
         "id": "other_language",
         "type": "text",
-        "prompt": "Besides the languages you have already listed, in which other languages do you know number words?"
+        "prompt": "Besides the languages you have already listed, in which other languages do you know number words? If none, enter “None”.",
+        "required": true
       },
       {
         "id": "major",
         "type": "longtext",
-        "prompt": "What is your current, past, or intended college major? If you have no university education, please leave this blank."
+        "prompt": "What is your current, past, or intended college major? If you have no university education, please leave this blank.",
+        "required": false
       },
       {
         "id": "math",
@@ -1254,19 +1719,22 @@
             22,
             "Beyond 20"
           ]
-        ]
+        ],
+        "required": true
       },
       {
         "id": "strategy",
         "type": "longtext",
-        "prompt": "Please describe the strategies you used to decide whether the number expressions were real number words in the Numerons’ language."
+        "prompt": "Please describe the strategies you used to decide whether the number expressions were real number words in the Numerons’ language.",
+        "required": true
       },
       {
         "id": "comments",
         "type": "longtext",
-        "prompt": "Please share any comments you have about the experiment."
+        "prompt": "Please share any comments you have about the experiment. If you have no comments, enter “None”.",
+        "required": true
       }
     ]
   },
-  "content_sha256": "b47639d0ac331ee8d24f4ded240620a2308db515235c446ed852e2f8c4cd3438"
+  "content_sha256": "aa6b964dbaad18d278e8551187ac569b5948aa9946c28e5063f9334bc113434c"
 }
