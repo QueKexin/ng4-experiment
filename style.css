@@ -18,8 +18,6 @@ button:disabled{cursor:wait;opacity:.5}a{color:#234f79}p{margin:0 0 1.15em}p:las
 kbd{display:inline-flex;align-items:center;justify-content:center;border:2px solid #526778;border-bottom-width:4px;border-radius:5px;background:#fff;min-width:47px;height:48px;margin:0 8px;font:700 27px Arial,sans-serif;color:#263746}
 .stimulus{border:2px solid #a7b7c6;border-radius:12px;padding:32px;margin:30px auto;max-width:850px;font-size:clamp(30px,3.4vw,44px);font-weight:700;line-height:1.35}
 .comparison{font-size:clamp(30px,3.4vw,44px);font-weight:700}.fixation{font-size:48px;line-height:1}
-.correct::after{content:"";position:fixed;inset:0;pointer-events:none;border:20px solid #15803d;z-index:10}
-.incorrect{font-size:32px;font-weight:700;margin-bottom:32px}.feedback-order{font-size:30px}
 .hint{font-size:18px;color:#526778}.choices{max-width:780px;margin:25px auto;display:grid;gap:10px;text-align:left}
 .choice{display:flex;gap:16px;align-items:center;border:1.5px solid #c3cdd5;border-radius:8px;padding:10px 18px;cursor:pointer;line-height:1.3}
 .choice.selected{border:2px solid #536f89;background:#f0f5f9}.choice input{width:23px;height:23px;flex-shrink:0;accent-color:#536f89}
@@ -32,3 +30,28 @@ textarea.field{min-height:160px;resize:vertical}.form-actions{display:flex;gap:1
 .instruction-key-icons{margin:18px auto;}
 
 .celebration{font-size:clamp(52px,7vw,86px);font-weight:700;line-height:1.25}.celebration-icon{display:block;font-size:clamp(76px,10vw,120px);margin-bottom:24px}
+
+.feedback-result{font-size:clamp(56px,7vw,86px);font-weight:700;line-height:1.2}
+
+.response-keys{display:flex!important;width:100%;max-width:none!important;justify-content:space-between;align-self:stretch;font-size:24px}
+#footer{position:relative;min-height:96px}.response-trial #page{align-items:flex-start;padding-top:65px}
+.response-trial .stimulus{margin:24px auto}.feedback-slot{min-height:160px;margin:30px auto 14px;max-width:960px}
+.feedback-box{border:2px solid currentColor;border-radius:10px;padding:18px 24px;background:white;text-align:center}
+.feedback-label{font-size:clamp(32px,4vw,48px);font-weight:700;margin:0;line-height:1.15}.feedback-correct{color:#15803d}.feedback-incorrect{color:#b91c1c}
+.feedback-notes{font-size:22px;color:#263746;margin-top:16px;line-height:1.4}.continue-hint{text-align:right;font-size:18px;color:#526778;margin:18px 0 0}
+
+.comprehension-trial #page{align-items:flex-start;padding-top:12px}.comprehension-trial .choices{gap:6px;margin:16px auto}.comprehension-trial .choice{font-size:20px;padding:6px 14px;line-height:1.25}.comprehension-trial .feedback-slot{min-height:150px;margin:16px auto 8px}
+
+.comprehension-trial[data-stage="feedback"] #footer .hint,.comprehension-trial[data-stage="feedback"] #footer .navigation{display:none}
+
+.feedback-slot,.comprehension-trial .feedback-slot{min-height:106px;margin:14px auto 8px;max-width:900px}
+.feedback-box{padding:8px 18px;border-radius:8px}.feedback-label{font-size:clamp(26px,3vw,34px);line-height:1.1}
+.feedback-notes{font-size:18px;margin-top:6px;line-height:1.25}.continue-hint{margin:10px 0 0}
+
+.feedback-box{position:relative}.feedback-countdown{position:absolute;top:8px;right:10px;color:#657586;font-size:14px;font-weight:400;line-height:1.2;white-space:nowrap}
+
+.consent-form{max-width:1000px;margin:auto;text-align:left}.consent-form h1{font-size:28px;margin:0 0 18px}.consent-reader{max-height:58vh;overflow:auto;border:1px solid #bac6cf;border-radius:8px;padding:20px 24px;font-size:18px;line-height:1.5;background:white}.consent-reader p{margin-bottom:1em}.consent-choice{display:flex;align-items:center;gap:12px;margin:20px 0;font-size:22px}.consent-choice input{width:23px;height:23px}.consent-form button{min-width:150px}.consent-form .hint{margin-top:12px}
+
+@media print{.consent-reader{max-height:none;overflow:visible;border:0}.consent-choice,.consent-form button,.consent-form .hint,#preview-banner{display:none!important}}
+
+#experiment[data-stage="consent"] #footer{display:none}#experiment[data-stage="consent"] #page{min-height:0;padding:10px 0}

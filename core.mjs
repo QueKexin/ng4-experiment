@@ -39,9 +39,9 @@ export class Learning {
     return result;
   }
 }
-export function responseText(key,trial={}){
+export function responseText(key,trial={},magnitudeLabels=null){
   const statement=['learning','comparison'].includes(trial.phase)&&/^\w+ > \w+$/.test(trial.stimulus??'');
-  return (statement?{j:'Correct',s:'Correct',k:'Incorrect'}:{j:'Yes',s:'Yes',k:'No'})[key]??key;
+  return (statement&&magnitudeLabels!=='yes_no'?{'/':'Correct',c:'Incorrect',j:'Correct',s:'Correct',k:'Incorrect'}:{'/':'Yes',c:'No',j:'Yes',s:'Yes',k:'No'})[key]??key;
 }
 export function sameSelection(selection,expected){
   return selection.size===expected.length&&expected.every(i=>selection.has(i));
@@ -52,7 +52,7 @@ export function cleanRows(rows,meta,answers={}){
     Object.assign(result,{session:meta.session,participant:meta.participant,experiment_version:meta.version,
       engine:'browser',phase:row.phase,trial_id:row.trial_id,trial_number:row.presentation_order,
       stimulus:row.stimulus,condition:row.condition,distance:row.distance??'',
-      correct_response:responseText(row.correct_key,row),response:responseText(row.response,row),
+      correct_response:responseText(row.correct_key,row,meta.magnitude_response_labels),response:responseText(row.response,row,meta.magnitude_response_labels),
       correct:row.correct,rt_seconds:row.rt_seconds});
     for(const [id,field] of Object.entries(DEMOGRAPHIC_MAP)){
       const answer=answers[id];
@@ -76,7 +76,7 @@ export function payload(rows,meta,answers,learning){
   const demographics=Object.fromEntries(Object.entries(DEMOGRAPHIC_MAP).map(([id,field])=>{
     const a=answers[id];return [field,a?.status==='answered'?(a.other||(a.value??'')):''];
   }));
-  return {trials,subject_information:{...demographics,session:meta.session,experiment_version:meta.version,
+  return {trials,subject_information:{consent_json:JSON.stringify(meta.consent??null),magnitude_response_labels:meta.magnitude_response_labels,...demographics,session:meta.session,experiment_version:meta.version,
     content_sha256:meta.content_sha256,seed:meta.seed,started_at:meta.started_at,completed_at:meta.completed_at,
     duration_seconds:meta.duration_seconds,questionnaire_version:meta.questionnaire_version,
     learning_blocks:learning.block,learning_failures:learning.failed,learning_errors:learning.errors,learning_passed_block:learning.block,
@@ -102,7 +102,7 @@ export function validateContent(content){
   for(const trial of content.comparisons){
     const [,a,b]=trial.stimulus.match(/^(\w+) > (\w+)$/)||[];
     if(!order.includes(a)||!order.includes(b)||a===b||trial.distance!==Math.abs(order.indexOf(a)-order.indexOf(b))||
-      trial.correct_key!==(order.indexOf(a)>order.indexOf(b)?'j':'k'))throw new Error('Invalid comparison: '+trial.trial_id);
+      trial.correct_key!==(order.indexOf(a)>order.indexOf(b)?'/':'c'))throw new Error('Invalid comparison: '+trial.trial_id);
   }
   return content;
 }

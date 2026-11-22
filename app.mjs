@@ -1,4 +1,4 @@
-import {Learning,seededRandom,shuffle,sameSelection,cleanRows,passingRows,payload,csv,validateContent} from './core.mjs?v=ng4_web_v12_local';
+import {Learning,seededRandom,shuffle,sameSelection,cleanRows,passingRows,payload,csv,validateContent} from './core.mjs?v=ng4_web_v22_local';
 
 const $=selector=>document.querySelector(selector);
 const content=$('#content'),footer=$('#footer'),notes=$('#notes'),root=$('#experiment');
@@ -13,10 +13,11 @@ const held=new Set();
 const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function rich(s){return esc(s).replace(/\b(Pog|Gom|Jop|Zok|Lod|Powers?|powers?)\b/gi,'<strong class="power">$1</strong>')
-  .replace(/\b(Fim|Miv|Digits?|digits?)\b/gi,'<strong class="digit">$1</strong>').replace(/\bRight Key\b/g,'<strong>Right Key</strong>');}
+  .replace(/\b(Fim|Miv|Digits?|digits?)\b/gi,'<strong class="digit">$1</strong>').replace(/\bRight Key\b/g,'<strong>Right Key</strong>').replace(/(C for No|\/ for Yes)/g,'<strong>$1</strong>');}
 const prose=(s,styled=true)=>String(s).split(/\n\s*\n/).map(p=>'<p>'+(styled?rich(p):esc(p)).replaceAll('\n','<br>')+'</p>').join('');
-const keyLegend=(magnitude=false)=>'<div class="response-keys"><span>Press <kbd>'+'J'+'</kbd> for '+(magnitude?'Correct':'Yes')+'</span><span><kbd>K</kbd> for '+(magnitude?'Incorrect':'No')+'</span></div>';
-const magnitudeInstructionKeys=()=>'<span class="response-keys instruction-key-icons"><span><kbd>J</kbd> Correct</span><span><kbd>K</kbd> Incorrect</span></span>';
+const keyLegend=(magnitude=false)=>'<div class="response-keys"><span><kbd>C</kbd> '+'No'+'</span><span><kbd>/</kbd> '+'Yes'+'</span></div>';
+const magnitudeInstructionKeys=()=>'<span class="response-keys instruction-key-icons"><span><kbd>C</kbd> No</span><span><kbd>/</kbd> Yes</span></span>';
+const feedbackSlot=()=>'<div class="feedback-slot" aria-live="polite"></div>';
 const nextLabel='(Right Key for Continue)',backLabel='(Left Key for Back)';
 
 document.addEventListener('keydown',event=>{
@@ -35,7 +36,7 @@ window.addEventListener('beforeunload',event=>{
 });
 
 function draw(html,{note='',keys='',footerHTML=''}={}){
-  pageEpoch++;activeKeys=null;root.classList.remove('correct');
+  pageEpoch++;activeKeys=null;root.classList.remove('correct','response-trial','comprehension-trial');
   content.innerHTML=html;notes.hidden=!note;$('#notes-content').innerHTML=rich(note);
   footer.innerHTML=keys+footerHTML;root.dataset.stage='page';
 }
@@ -55,12 +56,12 @@ function page(html,{note='',back=false,keys=''}={}){
 async function pages(items){
   let index=0;
   while(index<items.length){const item=items[index];
-    const body=item.body.replace('Press J for Yes or K for No.','').trim();
-    let instructionHTML=prose(body,item.semantic_colors!==false).replace('Press J for Correct or K for Incorrect.','Press J for Correct or K for Incorrect.'+magnitudeInstructionKeys());
+    const body=item.body.replace('Press / for Yes or C for No.','').trim();
+    let instructionHTML=prose(body,item.semantic_colors!==false).replace(rich('Press C for No or / for Yes.'),rich('Press C for No or / for Yes.')+magnitudeInstructionKeys());
     for(const sentence of item.emphasize??[])instructionHTML=instructionHTML.replace(rich(sentence),'<strong>'+rich(sentence)+'</strong>');
     if(item.celebration)instructionHTML='<div class="celebration"><span class="celebration-icon" aria-hidden="true">👍</span><p>Good job!</p></div>';
     const direction=await page(instructionHTML,{note:item.notes??'',back:index>0,
-      keys:item.body.includes('Press J for Yes or K for No.')?keyLegend():''});
+      keys:item.body.includes('Press / for Yes or C for No.')?keyLegend():''});
     index=direction==='left'?Math.max(0,index-1):index+1;
   }
 }
@@ -72,9 +73,9 @@ async function comprehension(){
       const multiple=q.correct.length>1;
       draw(prose(q.prompt,false)+'<div class="choices">'+q.options.map((option,j)=>
         '<label class="choice"><span class="option-number">'+(j+1)+'</span><input type="'+(multiple?'checkbox':'radio')+
-        '" name="answer" value="'+j+'">'+esc(option)+'</label>').join('')+'</div>',
+        '" name="answer" value="'+j+'">'+esc(option)+'</label>').join('')+'</div>'+feedbackSlot(),
         {footerHTML:'<p class="hint">Number keys to select'+(multiple?' all that apply':'')+'; Right Key to submit.</p>'+navigate()});
-      root.dataset.stage='comprehension';const onset=performance.now();
+      root.classList.add('comprehension-trial');root.dataset.stage='comprehension';const onset=performance.now();
       const selection=await new Promise(resolve=>{
         const finish=()=>{const selected=new Set([...document.querySelectorAll('input:checked')].map(el=>Number(el.value)));
           if(!selected.size)return;activeKeys=null;resolve(selected);};
@@ -92,7 +93,7 @@ async function comprehension(){
         condition:'instruction_check',correct_key:q.correct.map(j=>q.options[j]).join('; '),
         response:[...selection].sort((a,b)=>a-b).map(j=>q.options[j]).join('; '),correct:Number(correct),
         rt_seconds:(performance.now()-onset)/1000});
-      if(!correct)await page('<p>Please review the Notes and read the question carefully before trying again.</p>',{note:'Digits: Fim ? Miv\n'+spec.power_order});
+      await trialFeedback(correct,'comprehension',!correct&&i>=2?spec.comprehension_category_notes:'');
     }
   }
 }
@@ -107,6 +108,7 @@ function timedQuestion(trial){
   const judgment=trial.phase==='judgment'||trial.phase==='english_judgment';
   draw(judgment?prose(trial.phase==='english_judgment'?spec.english_prompt:spec.judgment_prompt)+'<div class="stimulus">'+rich(trial.stimulus)+'</div>':
     '<div class="comparison">'+rich(trial.stimulus)+'</div>',{keys:keyLegend(!judgment)});
+  content.insertAdjacentHTML('beforeend',feedbackSlot());root.classList.add('response-trial');
   root.dataset.stage=judgment?trial.phase:'learning';
   return new Promise(resolve=>{
     timing={onset_ms:null,focus_losses:0,hidden_during_trial:document.hidden,rt_valid:!document.hidden};
@@ -115,8 +117,8 @@ function timedQuestion(trial){
     requestAnimationFrame(()=>{
       timing.onset_ms=performance.now();
       activeKeys=(event,key)=>{
-        const positive='j';
-        if(key!==positive&&key!=='k')return false;
+        const positive='/';
+        if(key!==positive&&key!=='c')return false;
         const now=performance.now();const eventTime=event.timeStamp;
         const responseTime=eventTime>=timing.onset_ms&&eventTime<=now+2?eventTime:now;
         const result={response:key,rt_seconds:(responseTime-timing.onset_ms)/1000,...timing};
@@ -126,15 +128,25 @@ function timedQuestion(trial){
     });
   });
 }
-async function incorrect(){
-  draw('<p class="incorrect">Incorrect. Please study them carefully:</p><p class="feedback-order">'+rich(spec.power_order)+'</p>',
-    {footerHTML:'<p class="hint">Press any key to go to the next page.</p>'});
-  root.dataset.stage='incorrect';
-  await new Promise(resolve=>{
-    activeKeys=()=>{
-      activeKeys=null;resolve();return true;
-    };
-  });
+async function trialFeedback(correct,phase,notesText=''){
+  activeKeys=null;
+  const slot=$('.feedback-slot');
+  document.querySelectorAll('#content input,#footer button').forEach(el=>el.disabled=true);
+  slot.innerHTML='<div class="feedback-box '+(correct?'feedback-correct':'feedback-incorrect')+'"><p class="feedback-label">'+(correct?'Correct':'Incorrect')+'</p>'+
+    (notesText?'<div class="feedback-notes">'+rich(notesText).replaceAll('\n','<br>')+'</div>':'')+'<span class="feedback-countdown"></span></div>';
+  const seconds=correct?spec.config.correct_feedback_seconds:spec.config.incorrect_feedback_seconds;
+  root.dataset.stage='feedback';root.dataset.feedback=correct?'correct':'incorrect';root.dataset.feedbackPhase=phase;
+  root.dataset.feedbackStartedAt=String(performance.now());
+  const countdown=$('.feedback-countdown');
+  const deadline=performance.now()+seconds*1000;
+  const updateCountdown=()=>{const label=(correct?'Disappears in (':'Continue in (')+Math.max(1,Math.ceil((deadline-performance.now())/1000))+')';if(countdown.textContent!==label)countdown.textContent=label;};
+  updateCountdown();const countdownTimer=setInterval(updateCountdown,50);
+  try{await sleep(seconds*1000);}finally{clearInterval(countdownTimer);}
+  if(!correct){
+    countdown.textContent='Press any key to continue';root.dataset.feedbackReady='true';
+    await new Promise(resolve=>{activeKeys=()=>{activeKeys=null;resolve();return true;};});
+  }
+  delete root.dataset.feedback;delete root.dataset.feedbackPhase;delete root.dataset.feedbackReady;
 }
 async function learn(){
   learning=new Learning(spec.comparisons,seededRandom(meta.seed^0x4E4734),spec.config.learning_min_accuracy);
@@ -142,8 +154,7 @@ async function learn(){
     const trial=learning.current();await wait(spec.config.fixation_seconds*1000,true);
     const response=await timedQuestion(trial);const row=learning.answer(response.response);
     record({...row,...response});
-    if(row.correct){root.dataset.stage='correct';root.classList.add('correct');await sleep(spec.config.correct_border_seconds*1000);root.classList.remove('correct');}
-    else await incorrect();
+    await trialFeedback(row.correct,'learning',row.correct?'':spec.magnitude_hint);
     if(!learning.passed)await wait(spec.config.intertrial_seconds*1000);
   }
   persist();
@@ -153,7 +164,9 @@ async function judgments(english=false){
   for(let i=0;i<order.length;i++){
     const trial=order[i];await wait(spec.config.fixation_seconds*1000,true);
     const response=await timedQuestion(trial);
-    record({...trial,...response,presentation_order:i+1,correct:Number(response.response===trial.correct_key)});
+    const correct=Number(response.response===trial.correct_key);
+    record({...trial,...response,presentation_order:i+1,correct});
+    await trialFeedback(correct,trial.phase);
     if(i<order.length-1)await wait(spec.config.intertrial_seconds*1000);
   }
 }
@@ -272,13 +285,25 @@ async function init(){
   let backup;try{backup=sessionStorage.getItem('ng4-active-session');}catch{/* Browser storage can be disabled. */}
   if(backup){showRecoveredBackup(backup);return;}
   const seed=crypto.getRandomValues(new Uint32Array(1))[0];
-  meta={version:spec.version,content_sha256:spec.content_sha256,session:'NG4_'+new Date().toISOString().replace(/[:.]/g,'_')+'_'+seed,
+  meta={magnitude_response_labels:'yes_no',version:spec.version,content_sha256:spec.content_sha256,session:'NG4_'+new Date().toISOString().replace(/[:.]/g,'_')+'_'+seed,
     participant:ROUTED?credentials[1]:'PREVIEW',seed,questionnaire_version:spec.demographics.questionnaire_version,
     browser:navigator.userAgent,screen:innerWidth+'x'+innerHeight};
   $('#preview-banner').hidden=!PREVIEW;
-  draw('<p>This experiment uses your keyboard. Please use a desktop or laptop computer and keep this window visible while responding.</p>'+
-    '<button id="begin" type="button">Begin</button>');root.dataset.stage='start';
-  $('#begin').onclick=()=>run().catch(fatal);
+  const form=spec.consent_form;
+  draw('<section class="consent-form"><h1>'+esc(form.title)+'</h1><div class="consent-reader" tabindex="0" aria-label="Consent form text">'+
+    form.paragraphs.map(text=>'<p>'+esc(text).replaceAll('\n','<br>')+'</p>').join('')+'</div>'+
+    '<label class="consent-choice"><input type="checkbox" id="consent-accept"> '+esc(form.accept_label)+'</label>'+
+    '<button id="begin" type="button" disabled>Continue</button><p class="hint">Select Accept, then press Right Key or Continue.</p></section>');
+  root.dataset.stage='consent';
+  $('#consent-accept').onchange=()=>$('#begin').disabled=!$('#consent-accept').checked;
+  const accept=()=>{
+    if(started||!$('#consent-accept').checked)return;
+    activeKeys=null;
+    meta.consent={accepted:true,choice:form.accept_label,choice_code:form.accept_code,form_version:form.version,text_sha256:form.text_sha256,accepted_at:new Date().toISOString()};
+    run().catch(fatal);
+  };
+  $('#begin').onclick=accept;
+  activeKeys=(_,key)=>{if(key==='arrowright') {accept();return true;}return false;};
 }
 function fatal(error){console.error(error);timing=null;activeKeys=null;persist();
   draw('<p>The experiment could not continue. Please keep this tab open and contact the researcher through Prolific.</p>'+

@@ -1,5 +1,20 @@
 {
-  "version": "ng4_web_v12_local",
+  "consent_form": {
+    "version": "ng4_consent_v1",
+    "title": "Consent form",
+    "paragraphs": [
+      "I am Kexin Que, a researcher in the Department of Psychology at Northwestern University. You are reading this document because you selected our study from Prolific. You are invited to take part in a research study of the basic psychological processes that people engage in to make sense of and understand the world around them. The purpose of this research study is to understand how people think about the structure of number words. If you agree to participate, you will be asked to play a fun game about finding the correct number words in a novel language.",
+      "Participation in this study will involve no cost to you. Payment will be provided in accordance with Prolific’s payment policies. You will receive a $1 bonus if your performance is above 80%. Payment will be processed through Prolific. The experiment is expected to last no more than 20 minutes. Taking part in this study may help scientists to understand the difficulties involved in learning a domain of mathematics or science. Your participation does not involve any risks other than what you would encounter in daily life. You may leave the study at any time.",
+      "Confidentiality: Study records that can identify you will be kept confidential because we will not request any identifiable data. This survey is being hosted by Prolific and involves a secure connection.",
+      "The results of the research study may be published, but your name will not be used. If you have any questions about this study you may contact Lance Rips, the person in charge of this research study; you can also contact Kexin Que (see contact information below). If you have questions about your rights as a research subject, you can contact the Northwestern University Institutional Review Board (IRB) Office. You can call them at (312) 503-9338 or send e-mail to irb@northwestern.edu. If you want a copy of this consent for your records, you can print it from the screen. If you would like any documentation related to this research study, please email your request to the Principal Investigator at rips@northwestern.edu.",
+      "If you wish to participate, please select the Accept button below to begin the survey. If you do not wish to participate in this study, please close this webpage.",
+      "Sincerely,\nLance Rips\nPrincipal Investigator: rips@northwestern.edu\nNorthwestern University, Department of Psychology\n2029 Sheridan Road\nEvanston, IL 60208\n\nKexin Que\nResearch Coordinator: kexinque2028@u.northwestern.edu"
+    ],
+    "accept_label": "Accept",
+    "accept_code": 4,
+    "text_sha256": "25087862dd1cc4f3c690632763cf7d86cb35293065767fd4bb6538cbff2b21c5"
+  },
+  "version": "ng4_web_v22_local",
   "powers": [
     "Pog",
     "Gom",
@@ -22,7 +37,7 @@
       "notes": "Digits: Fim ? Miv (“?” means the relative magnitude of the two Digits is unknown)"
     },
     {
-      "body": "Powers are words for some special large numbers. They represent a category of mainly nounlike numeral forms often used as multiplicational components. They are like thousand, billion, and other similar kinds of number words in English. Remember, the base of the Numerons’ number language is unknown and may not conform to your own number base.\n\nSo far, we have discovered five powers: “Pog,” “Gom,” “Jop,” “Zok,” and “Lod.” Lod is greater than Zok, Zok is greater than Jop, Jop is greater than Gom, and Gom is greater than Pog. These are just five of possibly many more multipliers.",
+      "body": "Powers are words for some special large numbers. They are mainly nounlike number words. They are like thousand, billion, and other similar kinds of number words in English. Remember, the base of the Numerons’ number language is unknown and may not conform to your own number base.\n\nSo far, we have discovered five powers: “Pog,” “Gom,” “Jop,” “Zok,” and “Lod.” Lod is greater than Zok, Zok is greater than Jop, Jop is greater than Gom, and Gom is greater than Pog. These are just five of possibly many more powers.",
       "notes": "Powers: Pog < Gom < Jop < Zok < Lod"
     },
     {
@@ -38,7 +53,9 @@
       "notes": ""
     }
   ],
-  "comprehension_intro": "Below are some questions to check your understanding of the Numeron's language.\n\nUse the number keys to select your answer or answers, then press Right Key to submit.",
+  "comprehension_intro": "Below are some questions to check your understanding of the Numerons’ language.\n\nUse the number keys to select your answer or answers, then press Right Key to submit.",
+  "comprehension_category_notes": "Digits: Fim, Miv\nPowers: Pog, Gom, Jop, Zok, Lod",
+  "magnitude_hint": "Hint: Pog < Gom < Jop < Zok < Lod",
   "comprehension": [
     {
       "prompt": "Which ones are like “one,” “two,” and “three” … in English?",
@@ -96,14 +113,14 @@
       ]
     }
   ],
-  "magnitude_instructions": "As a professional anthropologist, you must demonstrate your understanding of the Numerons’ number language. Each block contains 20 magnitude comparisons in a random order. To move on to the next phase, you must answer at least 18 out of 20 correctly (90% accuracy). If you score below 90%, you will repeat the same 20 comparisons in a new random order. Please do not take notes or use other aids; try to memorize the relative magnitudes instead.\n\nOn the next pages, you will see statements such as “Lod > Zok.” Press J for Correct or K for Incorrect. Make each judgment as quickly and accurately as you can.\n\nStudy the relative magnitudes of the Numerons’ words—for example, Lod is greater than Zok. When you have memorized the relative magnitudes of the Powers, press Right Key to continue.",
+  "magnitude_instructions": "As a professional anthropologist, you must demonstrate a good understanding of what is already known about the Numerons’ number language. Starting on the next page, you will see one pair of power words at a time and judge their relative magnitudes. You must answer at least 18 out of 20 comparisons correctly (90% accuracy) to move on to the next task. If you score below 90%, you will repeat the set of 20 comparisons. Please try to memorize the relative magnitudes of the power words without taking notes or using other aids.\n\nOn the next pages, you will see statements such as “Lod > Zok.” Decide whether the first word is greater than the second. Press C for No or / for Yes. Make each judgment as quickly and accurately as you can.\n\nStudy the relative magnitudes of the Numerons’ words—for example, Lod is greater than Zok. When you have memorized the relative magnitudes of the Powers, press Right Key to continue.",
   "task_pages": [
     {
       "body": "Starting on the next page, you will see one number expression at a time. Your job is to decide whether it is a real number word in the Numerons’ language. In your own native language, for example, not all combinations of number words when placed together form another number word. If X is a number word and Y is a number word, the combinations XX, YY, XY, and YX may or may not be number words. Only certain combinations are real number words.",
       "notes": ""
     },
     {
-      "body": "Please remember to study them carefully and then decide if they are a real number word. \n\nPress J for Yes or K for No. Respond as quickly as you can while trying to be correct.\n\nThe first trial starts in the next page.",
+      "body": "Please remember to study them carefully and then decide if they are a real number word. \n\nPress / for Yes or C for No. Respond as quickly as you can while trying to be correct.\n\nThe first trial starts in the next page.",
       "notes": ""
     }
   ],
@@ -116,7 +133,7 @@
       "condition": "magnitude",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "j"
+      "correct_key": "/"
     },
     {
       "phase": "comparison",
@@ -125,7 +142,7 @@
       "condition": "magnitude",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "k"
+      "correct_key": "c"
     },
     {
       "phase": "comparison",
@@ -134,7 +151,7 @@
       "condition": "magnitude",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "j"
+      "correct_key": "/"
     },
     {
       "phase": "comparison",
@@ -143,7 +160,7 @@
       "condition": "magnitude",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "k"
+      "correct_key": "c"
     },
     {
       "phase": "comparison",
@@ -152,7 +169,7 @@
       "condition": "magnitude",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "j"
+      "correct_key": "/"
     },
     {
       "phase": "comparison",
@@ -161,7 +178,7 @@
       "condition": "magnitude",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "k"
+      "correct_key": "c"
     },
     {
       "phase": "comparison",
@@ -170,7 +187,7 @@
       "condition": "magnitude",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "j"
+      "correct_key": "/"
     },
     {
       "phase": "comparison",
@@ -179,7 +196,7 @@
       "condition": "magnitude",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "k"
+      "correct_key": "c"
     },
     {
       "phase": "comparison",
@@ -188,7 +205,7 @@
       "condition": "magnitude",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "j"
+      "correct_key": "/"
     },
     {
       "phase": "comparison",
@@ -197,7 +214,7 @@
       "condition": "magnitude",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "k"
+      "correct_key": "c"
     },
     {
       "phase": "comparison",
@@ -206,7 +223,7 @@
       "condition": "magnitude",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "j"
+      "correct_key": "/"
     },
     {
       "phase": "comparison",
@@ -215,7 +232,7 @@
       "condition": "magnitude",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "k"
+      "correct_key": "c"
     },
     {
       "phase": "comparison",
@@ -224,7 +241,7 @@
       "condition": "magnitude",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "j"
+      "correct_key": "/"
     },
     {
       "phase": "comparison",
@@ -233,7 +250,7 @@
       "condition": "magnitude",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "k"
+      "correct_key": "c"
     },
     {
       "phase": "comparison",
@@ -242,7 +259,7 @@
       "condition": "magnitude",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "j"
+      "correct_key": "/"
     },
     {
       "phase": "comparison",
@@ -251,7 +268,7 @@
       "condition": "magnitude",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "k"
+      "correct_key": "c"
     },
     {
       "phase": "comparison",
@@ -260,7 +277,7 @@
       "condition": "magnitude",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "j"
+      "correct_key": "/"
     },
     {
       "phase": "comparison",
@@ -269,7 +286,7 @@
       "condition": "magnitude",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "k"
+      "correct_key": "c"
     },
     {
       "phase": "comparison",
@@ -278,7 +295,7 @@
       "condition": "magnitude",
       "distance": 4,
       "document_distance": 4,
-      "correct_key": "j"
+      "correct_key": "/"
     },
     {
       "phase": "comparison",
@@ -287,7 +304,7 @@
       "condition": "magnitude",
       "distance": 4,
       "document_distance": 4,
-      "correct_key": "k"
+      "correct_key": "c"
     }
   ],
   "judgments": [
@@ -298,7 +315,7 @@
       "condition": "syntax_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "Pog Gom",
       "digit_order": "Fim Miv",
       "table_row": 1,
@@ -311,7 +328,7 @@
       "condition": "no_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Pog Gom",
       "digit_order": "Fim Miv",
       "table_row": 1,
@@ -324,7 +341,7 @@
       "condition": "no_syntax",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Pog Gom",
       "digit_order": "Fim Miv",
       "table_row": 1,
@@ -337,7 +354,7 @@
       "condition": "syntax_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "Pog Gom",
       "digit_order": "Miv Fim",
       "table_row": 2,
@@ -350,7 +367,7 @@
       "condition": "no_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Pog Gom",
       "digit_order": "Miv Fim",
       "table_row": 2,
@@ -363,7 +380,7 @@
       "condition": "no_syntax",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Pog Gom",
       "digit_order": "Miv Fim",
       "table_row": 2,
@@ -376,7 +393,7 @@
       "condition": "syntax_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "Gom Jop",
       "digit_order": "Fim Miv",
       "table_row": 3,
@@ -389,7 +406,7 @@
       "condition": "no_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Gom Jop",
       "digit_order": "Fim Miv",
       "table_row": 3,
@@ -402,7 +419,7 @@
       "condition": "no_syntax",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Gom Jop",
       "digit_order": "Fim Miv",
       "table_row": 3,
@@ -415,7 +432,7 @@
       "condition": "syntax_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "Gom Jop",
       "digit_order": "Miv Fim",
       "table_row": 4,
@@ -428,7 +445,7 @@
       "condition": "no_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Gom Jop",
       "digit_order": "Miv Fim",
       "table_row": 4,
@@ -441,7 +458,7 @@
       "condition": "no_syntax",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Gom Jop",
       "digit_order": "Miv Fim",
       "table_row": 4,
@@ -454,7 +471,7 @@
       "condition": "syntax_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "Jop Zok",
       "digit_order": "Fim Miv",
       "table_row": 5,
@@ -467,7 +484,7 @@
       "condition": "no_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Jop Zok",
       "digit_order": "Fim Miv",
       "table_row": 5,
@@ -480,7 +497,7 @@
       "condition": "no_syntax",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Jop Zok",
       "digit_order": "Fim Miv",
       "table_row": 5,
@@ -493,7 +510,7 @@
       "condition": "syntax_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "Jop Zok",
       "digit_order": "Miv Fim",
       "table_row": 6,
@@ -506,7 +523,7 @@
       "condition": "no_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Jop Zok",
       "digit_order": "Miv Fim",
       "table_row": 6,
@@ -519,7 +536,7 @@
       "condition": "no_syntax",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Jop Zok",
       "digit_order": "Miv Fim",
       "table_row": 6,
@@ -532,7 +549,7 @@
       "condition": "syntax_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "Zok Lod",
       "digit_order": "Fim Miv",
       "table_row": 7,
@@ -545,7 +562,7 @@
       "condition": "no_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Zok Lod",
       "digit_order": "Fim Miv",
       "table_row": 7,
@@ -558,7 +575,7 @@
       "condition": "no_syntax",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Zok Lod",
       "digit_order": "Fim Miv",
       "table_row": 7,
@@ -571,7 +588,7 @@
       "condition": "syntax_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "Zok Lod",
       "digit_order": "Miv Fim",
       "table_row": 8,
@@ -584,7 +601,7 @@
       "condition": "no_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Zok Lod",
       "digit_order": "Miv Fim",
       "table_row": 8,
@@ -597,7 +614,7 @@
       "condition": "no_syntax",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Zok Lod",
       "digit_order": "Miv Fim",
       "table_row": 8,
@@ -610,7 +627,7 @@
       "condition": "syntax_packing",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "Pog Jop",
       "digit_order": "Fim Miv",
       "table_row": 9,
@@ -623,7 +640,7 @@
       "condition": "no_packing",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Pog Jop",
       "digit_order": "Fim Miv",
       "table_row": 9,
@@ -636,7 +653,7 @@
       "condition": "no_syntax",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Pog Jop",
       "digit_order": "Fim Miv",
       "table_row": 9,
@@ -649,7 +666,7 @@
       "condition": "syntax_packing",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "Pog Jop",
       "digit_order": "Miv Fim",
       "table_row": 10,
@@ -662,7 +679,7 @@
       "condition": "no_packing",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Pog Jop",
       "digit_order": "Miv Fim",
       "table_row": 10,
@@ -675,7 +692,7 @@
       "condition": "no_syntax",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Pog Jop",
       "digit_order": "Miv Fim",
       "table_row": 10,
@@ -688,7 +705,7 @@
       "condition": "syntax_packing",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "Gom Zok",
       "digit_order": "Fim Miv",
       "table_row": 11,
@@ -701,7 +718,7 @@
       "condition": "no_packing",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Gom Zok",
       "digit_order": "Fim Miv",
       "table_row": 11,
@@ -714,7 +731,7 @@
       "condition": "no_syntax",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Gom Zok",
       "digit_order": "Fim Miv",
       "table_row": 11,
@@ -727,7 +744,7 @@
       "condition": "syntax_packing",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "Gom Zok",
       "digit_order": "Miv Fim",
       "table_row": 12,
@@ -740,7 +757,7 @@
       "condition": "no_packing",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Gom Zok",
       "digit_order": "Miv Fim",
       "table_row": 12,
@@ -753,7 +770,7 @@
       "condition": "no_syntax",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Gom Zok",
       "digit_order": "Miv Fim",
       "table_row": 12,
@@ -766,7 +783,7 @@
       "condition": "syntax_packing",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "Jop Lod",
       "digit_order": "Fim Miv",
       "table_row": 13,
@@ -779,7 +796,7 @@
       "condition": "no_packing",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Jop Lod",
       "digit_order": "Fim Miv",
       "table_row": 13,
@@ -792,7 +809,7 @@
       "condition": "no_syntax",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Jop Lod",
       "digit_order": "Fim Miv",
       "table_row": 13,
@@ -805,7 +822,7 @@
       "condition": "syntax_packing",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "Jop Lod",
       "digit_order": "Miv Fim",
       "table_row": 14,
@@ -818,7 +835,7 @@
       "condition": "no_packing",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Jop Lod",
       "digit_order": "Miv Fim",
       "table_row": 14,
@@ -831,7 +848,7 @@
       "condition": "no_syntax",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Jop Lod",
       "digit_order": "Miv Fim",
       "table_row": 14,
@@ -844,7 +861,7 @@
       "condition": "syntax_packing",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "Pog Zok",
       "digit_order": "Fim Miv",
       "table_row": 15,
@@ -857,7 +874,7 @@
       "condition": "no_packing",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Pog Zok",
       "digit_order": "Fim Miv",
       "table_row": 15,
@@ -870,7 +887,7 @@
       "condition": "no_syntax",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Pog Zok",
       "digit_order": "Fim Miv",
       "table_row": 15,
@@ -883,7 +900,7 @@
       "condition": "syntax_packing",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "Pog Zok",
       "digit_order": "Miv Fim",
       "table_row": 16,
@@ -896,7 +913,7 @@
       "condition": "no_packing",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Pog Zok",
       "digit_order": "Miv Fim",
       "table_row": 16,
@@ -909,7 +926,7 @@
       "condition": "no_syntax",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Pog Zok",
       "digit_order": "Miv Fim",
       "table_row": 16,
@@ -922,7 +939,7 @@
       "condition": "syntax_packing",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "Gom Lod",
       "digit_order": "Fim Miv",
       "table_row": 17,
@@ -935,7 +952,7 @@
       "condition": "no_packing",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Gom Lod",
       "digit_order": "Fim Miv",
       "table_row": 17,
@@ -948,7 +965,7 @@
       "condition": "no_syntax",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Gom Lod",
       "digit_order": "Fim Miv",
       "table_row": 17,
@@ -961,7 +978,7 @@
       "condition": "syntax_packing",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "Gom Lod",
       "digit_order": "Miv Fim",
       "table_row": 18,
@@ -974,7 +991,7 @@
       "condition": "no_packing",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Gom Lod",
       "digit_order": "Miv Fim",
       "table_row": 18,
@@ -987,7 +1004,7 @@
       "condition": "no_syntax",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Gom Lod",
       "digit_order": "Miv Fim",
       "table_row": 18,
@@ -1000,7 +1017,7 @@
       "condition": "syntax_packing",
       "distance": 4,
       "document_distance": 4,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "Pog Lod",
       "digit_order": "Fim Miv",
       "table_row": 19,
@@ -1013,7 +1030,7 @@
       "condition": "no_packing",
       "distance": 4,
       "document_distance": 4,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Pog Lod",
       "digit_order": "Fim Miv",
       "table_row": 19,
@@ -1026,7 +1043,7 @@
       "condition": "no_syntax",
       "distance": 4,
       "document_distance": 4,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Pog Lod",
       "digit_order": "Fim Miv",
       "table_row": 19,
@@ -1039,7 +1056,7 @@
       "condition": "syntax_packing",
       "distance": 4,
       "document_distance": 4,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "Pog Lod",
       "digit_order": "Miv Fim",
       "table_row": 20,
@@ -1052,7 +1069,7 @@
       "condition": "no_packing",
       "distance": 4,
       "document_distance": 4,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Pog Lod",
       "digit_order": "Miv Fim",
       "table_row": 20,
@@ -1065,7 +1082,7 @@
       "condition": "no_syntax",
       "distance": 4,
       "document_distance": 4,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "Pog Lod",
       "digit_order": "Miv Fim",
       "table_row": 20,
@@ -1092,7 +1109,7 @@
       "semantic_colors": false
     },
     {
-      "body": "In the following pages, you will see expressions constructed from these powers and the digits “six” and “seven”. Based on the information above, judge whether each expression is a real number word in this novel language.\n\nPress J for Yes or K for No. Respond as quickly and accurately as you can.",
+      "body": "In the following pages, you will see expressions constructed from these powers and the digits “six” and “seven”. Based on the information above, judge whether each expression is a real number word in this novel language.\n\nPress / for Yes or C for No. Respond as quickly and accurately as you can.",
       "notes": "",
       "emphasize": [
         "Quadrillion is the largest known single-word power in this language."
@@ -1116,418 +1133,418 @@
     {
       "phase": "english_judgment",
       "trial_id": "E01",
-      "stimulus": "six hundred thousand seven",
+      "stimulus": "six hundred thousand and seven",
       "condition": "syntax_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "hundred thousand",
       "digit_order": "six seven",
       "table_row": 1,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E02",
-      "stimulus": "six thousand hundred seven",
+      "stimulus": "six thousand hundred and seven",
       "condition": "no_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "hundred thousand",
       "digit_order": "six seven",
       "table_row": 1,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E03",
-      "stimulus": "hundred thousand six seven",
+      "stimulus": "hundred thousand six and seven",
       "condition": "no_syntax",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "hundred thousand",
       "digit_order": "six seven",
       "table_row": 1,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E04",
-      "stimulus": "seven hundred thousand six",
+      "stimulus": "seven hundred thousand and six",
       "condition": "syntax_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "hundred thousand",
       "digit_order": "seven six",
       "table_row": 2,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E05",
-      "stimulus": "seven thousand hundred six",
+      "stimulus": "seven thousand hundred and six",
       "condition": "no_packing",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "hundred thousand",
       "digit_order": "seven six",
       "table_row": 2,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E06",
-      "stimulus": "hundred thousand seven six",
+      "stimulus": "hundred thousand seven and six",
       "condition": "no_syntax",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "hundred thousand",
       "digit_order": "seven six",
       "table_row": 2,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E07",
-      "stimulus": "six hundred million seven",
+      "stimulus": "six hundred million and seven",
       "condition": "syntax_packing",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "hundred million",
       "digit_order": "six seven",
       "table_row": 3,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E08",
-      "stimulus": "six million hundred seven",
+      "stimulus": "six million hundred and seven",
       "condition": "no_packing",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "hundred million",
       "digit_order": "six seven",
       "table_row": 3,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E09",
-      "stimulus": "hundred million six seven",
+      "stimulus": "hundred million six and seven",
       "condition": "no_syntax",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "hundred million",
       "digit_order": "six seven",
       "table_row": 3,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E10",
-      "stimulus": "seven hundred million six",
+      "stimulus": "seven hundred million and six",
       "condition": "syntax_packing",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "hundred million",
       "digit_order": "seven six",
       "table_row": 4,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E11",
-      "stimulus": "seven million hundred six",
+      "stimulus": "seven million hundred and six",
       "condition": "no_packing",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "hundred million",
       "digit_order": "seven six",
       "table_row": 4,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E12",
-      "stimulus": "hundred million seven six",
+      "stimulus": "hundred million seven and six",
       "condition": "no_syntax",
       "distance": 2,
       "document_distance": 2,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "hundred million",
       "digit_order": "seven six",
       "table_row": 4,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E13",
-      "stimulus": "six hundred billion seven",
+      "stimulus": "six hundred billion and seven",
       "condition": "syntax_packing",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "hundred billion",
       "digit_order": "six seven",
       "table_row": 5,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E14",
-      "stimulus": "six billion hundred seven",
+      "stimulus": "six billion hundred and seven",
       "condition": "no_packing",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "hundred billion",
       "digit_order": "six seven",
       "table_row": 5,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E15",
-      "stimulus": "hundred billion six seven",
+      "stimulus": "hundred billion six and seven",
       "condition": "no_syntax",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "hundred billion",
       "digit_order": "six seven",
       "table_row": 5,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E16",
-      "stimulus": "seven hundred billion six",
+      "stimulus": "seven hundred billion and six",
       "condition": "syntax_packing",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "hundred billion",
       "digit_order": "seven six",
       "table_row": 6,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E17",
-      "stimulus": "seven billion hundred six",
+      "stimulus": "seven billion hundred and six",
       "condition": "no_packing",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "hundred billion",
       "digit_order": "seven six",
       "table_row": 6,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E18",
-      "stimulus": "hundred billion seven six",
+      "stimulus": "hundred billion seven and six",
       "condition": "no_syntax",
       "distance": 3,
       "document_distance": 3,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "hundred billion",
       "digit_order": "seven six",
       "table_row": 6,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E19",
-      "stimulus": "six hundred trillion seven",
+      "stimulus": "six hundred trillion and seven",
       "condition": "syntax_packing",
       "distance": 4,
       "document_distance": 4,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "hundred trillion",
       "digit_order": "six seven",
       "table_row": 7,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E20",
-      "stimulus": "six trillion hundred seven",
+      "stimulus": "six trillion hundred and seven",
       "condition": "no_packing",
       "distance": 4,
       "document_distance": 4,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "hundred trillion",
       "digit_order": "six seven",
       "table_row": 7,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E21",
-      "stimulus": "hundred trillion six seven",
+      "stimulus": "hundred trillion six and seven",
       "condition": "no_syntax",
       "distance": 4,
       "document_distance": 4,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "hundred trillion",
       "digit_order": "six seven",
       "table_row": 7,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E22",
-      "stimulus": "seven hundred trillion six",
+      "stimulus": "seven hundred trillion and six",
       "condition": "syntax_packing",
       "distance": 4,
       "document_distance": 4,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "hundred trillion",
       "digit_order": "seven six",
       "table_row": 8,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E23",
-      "stimulus": "seven trillion hundred six",
+      "stimulus": "seven trillion hundred and six",
       "condition": "no_packing",
       "distance": 4,
       "document_distance": 4,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "hundred trillion",
       "digit_order": "seven six",
       "table_row": 8,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E24",
-      "stimulus": "hundred trillion seven six",
+      "stimulus": "hundred trillion seven and six",
       "condition": "no_syntax",
       "distance": 4,
       "document_distance": 4,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "hundred trillion",
       "digit_order": "seven six",
       "table_row": 8,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E25",
-      "stimulus": "six hundred quadrillion seven",
+      "stimulus": "six hundred quadrillion and seven",
       "condition": "syntax_packing",
       "distance": 5,
       "document_distance": 5,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "hundred quadrillion",
       "digit_order": "six seven",
       "table_row": 9,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E26",
-      "stimulus": "six quadrillion hundred seven",
+      "stimulus": "six quadrillion hundred and seven",
       "condition": "no_packing",
       "distance": 5,
       "document_distance": 5,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "hundred quadrillion",
       "digit_order": "six seven",
       "table_row": 9,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E27",
-      "stimulus": "hundred quadrillion six seven",
+      "stimulus": "hundred quadrillion six and seven",
       "condition": "no_syntax",
       "distance": 5,
       "document_distance": 5,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "hundred quadrillion",
       "digit_order": "six seven",
       "table_row": 9,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E28",
-      "stimulus": "seven hundred quadrillion six",
+      "stimulus": "seven hundred quadrillion and six",
       "condition": "syntax_packing",
       "distance": 5,
       "document_distance": 5,
-      "correct_key": "j",
+      "correct_key": "/",
       "power_pair": "hundred quadrillion",
       "digit_order": "seven six",
       "table_row": 10,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E29",
-      "stimulus": "seven quadrillion hundred six",
+      "stimulus": "seven quadrillion hundred and six",
       "condition": "no_packing",
       "distance": 5,
       "document_distance": 5,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "hundred quadrillion",
       "digit_order": "seven six",
       "table_row": 10,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E30",
-      "stimulus": "hundred quadrillion seven six",
+      "stimulus": "hundred quadrillion seven and six",
       "condition": "no_syntax",
       "distance": 5,
       "document_distance": 5,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "hundred quadrillion",
       "digit_order": "seven six",
       "table_row": 10,
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E31",
-      "stimulus": "six hundred ten seven",
+      "stimulus": "six hundred ten and seven",
       "condition": "catch",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "ten hundred",
       "digit_order": "six seven",
       "table_row": "",
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     },
     {
       "phase": "english_judgment",
       "trial_id": "E32",
-      "stimulus": "seven hundred ten six",
+      "stimulus": "seven hundred ten and six",
       "condition": "catch",
       "distance": 1,
       "document_distance": 1,
-      "correct_key": "k",
+      "correct_key": "c",
       "power_pair": "ten hundred",
       "digit_order": "seven six",
       "table_row": "",
-      "stimulus_set": "english_hundred_32_v2"
+      "stimulus_set": "english_inline_keys_32_v4"
     }
   ],
   "config": {
@@ -1537,10 +1554,12 @@
     "show_bonus_statement": false,
     "bonus_threshold": 0.8,
     "description": "Bonus wording is disabled. This program does not issue payments.",
-    "correct_border_seconds": 0.4,
     "learning_pass_rule": "complete_block_accuracy",
     "learning_block_size": 20,
-    "learning_min_accuracy": 0.9
+    "learning_min_accuracy": 0.9,
+    "feedback_advance": "correct_auto_incorrect_key_after_countdown",
+    "correct_feedback_seconds": 3,
+    "incorrect_feedback_seconds": 3
   },
   "demographics": {
     "questionnaire_version": "nine_questions_v3_required",
@@ -1736,5 +1755,5 @@
       }
     ]
   },
-  "content_sha256": "e6695bb928c43af7ccdcafe6b5982643f5aa1adcb1d2745825e6009595b82087"
+  "content_sha256": "c0ed281845e33a1a334d6d462b26c7fdfd80d303b334706b16fa9fca7cdc3f75"
 }
