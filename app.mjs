@@ -1,4 +1,4 @@
-import {Learning,seededRandom,shuffle,sameSelection,cleanRows,passingRows,payload,csv,validateContent} from './core.mjs?v=ng4_web_v23_local';
+import {Learning,seededRandom,shuffle,sameSelection,cleanRows,passingRows,payload,csv,validateContent} from './core.mjs?v=ng4_web_v24_local';
 
 const $=selector=>document.querySelector(selector);
 const content=$('#content'),footer=$('#footer'),notes=$('#notes'),root=$('#experiment');
@@ -166,7 +166,7 @@ async function judgments(english=false){
     const response=await timedQuestion(trial);
     const correct=Number(response.response===trial.correct_key);
     record({...trial,...response,presentation_order:i+1,correct});
-    await trialFeedback(correct,trial.phase);
+    await trialFeedback(correct,trial.phase,correct?'':english?spec.english_judgment_hint:spec.numeron_judgment_hint);
     if(i<order.length-1)await wait(spec.config.intertrial_seconds*1000);
   }
 }

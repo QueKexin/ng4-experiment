@@ -14,7 +14,7 @@
     "accept_code": 4,
     "text_sha256": "25087862dd1cc4f3c690632763cf7d86cb35293065767fd4bb6538cbff2b21c5"
   },
-  "version": "ng4_web_v23_local",
+  "version": "ng4_web_v24_local",
   "powers": [
     "Pog",
     "Gom",
@@ -22,7 +22,7 @@
     "Zok",
     "Lod"
   ],
-  "power_order": "Powers: Pog < Gom < Jop < Zok < Lod",
+  "power_order": "Powers: Pog, Gom, Jop, Zok, Lod (ranked from small to large)",
   "instruction_pages": [
     {
       "body": "In this experiment, we’d like you to pretend that you are an anthropologist studying alien languages. This time, you have been assigned to study a population called the Numerons. Your job is to figure out some aspects of the Numerons’ number language.\n\nBelow are some things you’ve already discovered about their number language. Please study them carefully.",
@@ -34,11 +34,11 @@
     },
     {
       "body": "Digits are words for small numbers. They represent any numeral word up to the value of the base number. In English, they could be any of the numbers below ten (one, two,…, nine). However, the base of the Numerons’ number language is unknown and may not conform to your own number base.\n\nSo far, we have only discovered two Digits: “Fim” and “Miv”. It is unknown whether Fim is greater than Miv or vice versa. They are just two of possibly many more Digits.",
-      "notes": "Digits: Fim ? Miv (“?” means the relative magnitude of the two Digits is unknown)"
+      "notes": "Digits: Fim, Miv (relative order unknown)"
     },
     {
       "body": "Powers are words for some special large numbers. They are mainly nounlike number words. They are like thousand, billion, and other similar kinds of number words in English. Remember, the base of the Numerons’ number language is unknown and may not conform to your own number base.\n\nSo far, we have discovered five powers: “Pog,” “Gom,” “Jop,” “Zok,” and “Lod.” Lod is greater than Zok, Zok is greater than Jop, Jop is greater than Gom, and Gom is greater than Pog. These are just five of possibly many more powers.",
-      "notes": "Powers: Pog < Gom < Jop < Zok < Lod"
+      "notes": "Powers: Pog, Gom, Jop, Zok, Lod (ranked from small to large)"
     },
     {
       "body": "2. Number words in the Numeron language refer to positive whole numbers.",
@@ -55,7 +55,9 @@
   ],
   "comprehension_intro": "Below are some questions to check your understanding of the Numerons’ language.\n\nUse the number keys to select your answer or answers, then press Right Key to submit.",
   "comprehension_category_notes": "Digits: Fim, Miv\nPowers: Pog, Gom, Jop, Zok, Lod",
-  "magnitude_hint": "Hint: Pog < Gom < Jop < Zok < Lod",
+  "magnitude_hint": "Hint:\nPowers: Pog, Gom, Jop, Zok, Lod (ranked from small to large)",
+  "numeron_judgment_hint": "Hint:\nDigits: Fim, Miv (relative order unknown)\nPowers: Pog, Gom, Jop, Zok, Lod (ranked from small to large)",
+  "english_judgment_hint": "Hint:\nDigits: six, seven (ranked from small to large)\nPowers: ten, hundred, thousand, million, billion, trillion, quadrillion (ranked from small to large)",
   "comprehension": [
     {
       "prompt": "Which ones are like “one,” “two,” and “three” … in English?",
@@ -121,7 +123,7 @@
     },
     {
       "body": "Study the relative magnitudes of the Numerons’ words—for example, Lod is greater than Zok. When you have memorized the relative magnitudes of the Powers, press Right Key to continue.",
-      "notes": "Powers: Pog < Gom < Jop < Zok < Lod"
+      "notes": "Powers: Pog, Gom, Jop, Zok, Lod (ranked from small to large)"
     }
   ],
   "task_pages": [
@@ -1110,7 +1112,7 @@
       "semantic_colors": false
     },
     {
-      "body": "Your new task is to study a novel language that borrows words from English to express numbers.\n\nSo far, you have discovered seven power words in this language, ordered from smallest to largest:\n\nten < hundred < thousand < million < billion < trillion < quadrillion\n\nThese words have the same numerical values as in English. Quadrillion is the largest known single-word power in this language. No single-word powers for larger values have been discovered.",
+      "body": "Your new task is to study a novel language that borrows words from English to express numbers.\n\nSo far, you have discovered seven power words in this language, ordered from smallest to largest:\n\nPowers: ten, hundred, thousand, million, billion, trillion, quadrillion (ranked from small to large)\n\nThese words have the same numerical values as in English. Quadrillion is the largest known single-word power in this language. No single-word powers for larger values have been discovered.",
       "notes": "",
       "emphasize": [
         "Quadrillion is the largest known single-word power in this language."
@@ -1765,5 +1767,5 @@
       }
     ]
   },
-  "content_sha256": "8b464848ee87b0c001e225930db607370ba9e9a0c8a92685bec8bc7d1b99748a"
+  "content_sha256": "7aaf2518a06054f3d4772ed5e004ac5b8e08a1ea8589bf746b83edc5fb78784e"
 }

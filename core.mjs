@@ -1,6 +1,6 @@
 // Experiment rules and data transformations, independent of the browser UI.
 export const CLEAN_FIELDS = ['session','participant','experiment_version','engine','phase','trial_id',
-  'trial_number','stimulus','condition','distance','correct_response','response','correct','rt_seconds',
+  'trial_number','stimulus','condition','distance','correct_response','response','correct','rt_seconds','judgment_accuracy_percent',
   'age','gender','native_language','second_language','other_number_languages','major','math_courses','strategy','comments'];
 export const DEMOGRAPHIC_MAP = {age:'age',gender:'gender',language:'native_language',
   second_language:'second_language',other_language:'other_number_languages',major:'major',math:'math_courses',
@@ -47,13 +47,15 @@ export function sameSelection(selection,expected){
   return selection.size===expected.length&&expected.every(i=>selection.has(i));
 }
 export function cleanRows(rows,meta,answers={}){
+  const accuracy={};
+  for(const phase of ['judgment','english_judgment']){const task=rows.filter(r=>r.phase===phase);if(task.length)accuracy[phase]=Math.round(10000*task.reduce((n,r)=>n+Number(r.correct),0)/task.length)/100;}
   return rows.map(row=>{
     const result=Object.fromEntries(CLEAN_FIELDS.map(field=>[field,'']));
     Object.assign(result,{session:meta.session,participant:meta.participant,experiment_version:meta.version,
       engine:'browser',phase:row.phase,trial_id:row.trial_id,trial_number:row.presentation_order,
       stimulus:row.stimulus,condition:row.condition,distance:row.distance??'',
       correct_response:responseText(row.correct_key,row,meta.magnitude_response_labels),response:responseText(row.response,row,meta.magnitude_response_labels),
-      correct:row.correct,rt_seconds:row.rt_seconds});
+      correct:row.correct,rt_seconds:row.rt_seconds,judgment_accuracy_percent:accuracy[row.phase]??''});
     for(const [id,field] of Object.entries(DEMOGRAPHIC_MAP)){
       const answer=answers[id];
       result[field]=answer?.status==='answered'?(answer.other||(answer.value??'')):'';

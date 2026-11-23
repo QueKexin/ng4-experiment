@@ -7,7 +7,7 @@ button:disabled{cursor:wait;opacity:.5}a{color:#234f79}p{margin:0 0 1.15em}p:las
 #preview-banner{font-size:13px;position:fixed;top:8px;left:0;right:0;text-align:center;color:#64748b;pointer-events:none}
 #page{flex:1;display:flex;align-items:center;justify-content:center;min-height:330px;padding:22px 0}
 #content{width:100%;max-width:1030px;text-align:center;line-height:1.55;overflow-wrap:break-word}
-.power{color:#7e22ce;font-weight:700}.digit{color:#b45309;font-weight:700}
+.power{color:inherit;font-weight:700}.digit{color:inherit;font-weight:700}
 #notes{width:min(100%,930px);align-self:center;background:#f8fafb;border:2px solid #c9d3dc;border-radius:12px;padding:16px 25px;margin:16px 0 20px;text-align:center;line-height:1.55}
 .notes-label{font-size:16px;font-weight:700;color:#657586;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
 #notes-content{white-space:pre-line;font-weight:700}
@@ -63,3 +63,5 @@ textarea.field{min-height:160px;resize:vertical}.form-actions{display:flex;gap:1
 #experiment #footer{flex:0 0 auto}
 
 @media print{#experiment{height:auto;min-height:0}#experiment #page{overflow:visible;flex:0 0 auto}#content-stack{display:block}}
+
+.feedback-notes{font-size:17px;line-height:1.28;white-space:normal}.response-trial .feedback-slot{min-height:154px}

@@ -33,3 +33,5 @@ This repository contains experiment code and materials. Participant response dat
 ## Publishing updates
 
 Upload replacement files to the repository root on `main`. GitHub Pages must publish from **main / (root)**. Keep the filenames exactly as listed above; avoid trailing spaces or line breaks.
+
+The clean response export includes `judgment_accuracy_percent`: each participant’s task accuracy (0–100), calculated separately for Numeron and English judgments. English accuracy includes the two catch trials. Other phases are blank. Incorrect judgments show reference hints without category color coding.
