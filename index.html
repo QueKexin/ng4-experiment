@@ -6,16 +6,18 @@
   <meta name="referrer" content="no-referrer">
   <meta name="robots" content="noindex, nofollow">
   <title>Number language experiment</title>
-  <link rel="stylesheet" href="style.css?v=ng4_web_v22_local">
+  <link rel="stylesheet" href="style.css?v=ng4_web_v23_local">
   <script defer src="jquery-3.7.1.min.js"></script>
   <script defer src="proliferate.js"></script>
-  <script type="module" src="app.mjs?v=ng4_web_v22_local"></script>
+  <script type="module" src="app.mjs?v=ng4_web_v23_local"></script>
 </head>
 <body>
   <main id="experiment" tabindex="-1" aria-label="Experiment">
     <div id="preview-banner" hidden>Researcher preview · responses stay on this computer</div>
-    <div id="page"><div id="content"><p>Loading…</p></div></div>
-    <aside id="notes" hidden><div class="notes-label">Notes</div><div id="notes-content"></div></aside>
+    <div id="page"><div id="content-stack">
+      <div id="content"><p>Loading…</p></div>
+      <aside id="notes" hidden><div class="notes-label">Notes</div><div id="notes-content"></div></aside>
+    </div></div>
     <footer id="footer"></footer>
   </main>
   <noscript>This experiment requires JavaScript. Please enable JavaScript and reload.</noscript>

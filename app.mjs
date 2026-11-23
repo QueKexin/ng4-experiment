@@ -1,4 +1,4 @@
-import {Learning,seededRandom,shuffle,sameSelection,cleanRows,passingRows,payload,csv,validateContent} from './core.mjs?v=ng4_web_v22_local';
+import {Learning,seededRandom,shuffle,sameSelection,cleanRows,passingRows,payload,csv,validateContent} from './core.mjs?v=ng4_web_v23_local';
 
 const $=selector=>document.querySelector(selector);
 const content=$('#content'),footer=$('#footer'),notes=$('#notes'),root=$('#experiment');
@@ -261,7 +261,7 @@ async function run(){
   catch{/* The participant can still run without fullscreen; its state is recorded. */}
   await pages([...spec.instruction_pages,{body:spec.comprehension_intro}]);
   await comprehension();
-  await pages([{body:spec.magnitude_instructions,notes:spec.power_order}]);
+  await pages(spec.magnitude_instruction_pages);
   await learn();await pages(spec.task_pages);await judgments();await pages(spec.english_instruction_pages);await judgments(true);await demographics();await finish();
 }
 function showRecoveredBackup(backup){

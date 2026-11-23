@@ -14,7 +14,7 @@
     "accept_code": 4,
     "text_sha256": "25087862dd1cc4f3c690632763cf7d86cb35293065767fd4bb6538cbff2b21c5"
   },
-  "version": "ng4_web_v22_local",
+  "version": "ng4_web_v23_local",
   "powers": [
     "Pog",
     "Gom",
@@ -114,6 +114,16 @@
     }
   ],
   "magnitude_instructions": "As a professional anthropologist, you must demonstrate a good understanding of what is already known about the Numerons’ number language. Starting on the next page, you will see one pair of power words at a time and judge their relative magnitudes. You must answer at least 18 out of 20 comparisons correctly (90% accuracy) to move on to the next task. If you score below 90%, you will repeat the set of 20 comparisons. Please try to memorize the relative magnitudes of the power words without taking notes or using other aids.\n\nOn the next pages, you will see statements such as “Lod > Zok.” Decide whether the first word is greater than the second. Press C for No or / for Yes. Make each judgment as quickly and accurately as you can.\n\nStudy the relative magnitudes of the Numerons’ words—for example, Lod is greater than Zok. When you have memorized the relative magnitudes of the Powers, press Right Key to continue.",
+  "magnitude_instruction_pages": [
+    {
+      "body": "As a professional anthropologist, you must demonstrate a good understanding of what is already known about the Numerons’ number language. Starting on the next page, you will see one pair of power words at a time and judge their relative magnitudes. You must answer at least 18 out of 20 comparisons correctly (90% accuracy) to move on to the next task. If you score below 90%, you will repeat the set of 20 comparisons. Please try to memorize the relative magnitudes of the power words without taking notes or using other aids.\n\nOn the next pages, you will see statements such as “Lod > Zok.” Decide whether the first word is greater than the second. Press C for No or / for Yes. Make each judgment as quickly and accurately as you can.",
+      "notes": ""
+    },
+    {
+      "body": "Study the relative magnitudes of the Numerons’ words—for example, Lod is greater than Zok. When you have memorized the relative magnitudes of the Powers, press Right Key to continue.",
+      "notes": "Powers: Pog < Gom < Jop < Zok < Lod"
+    }
+  ],
   "task_pages": [
     {
       "body": "Starting on the next page, you will see one number expression at a time. Your job is to decide whether it is a real number word in the Numerons’ language. In your own native language, for example, not all combinations of number words when placed together form another number word. If X is a number word and Y is a number word, the combinations XX, YY, XY, and YX may or may not be number words. Only certain combinations are real number words.",
@@ -1755,5 +1765,5 @@
       }
     ]
   },
-  "content_sha256": "c0ed281845e33a1a334d6d462b26c7fdfd80d303b334706b16fa9fca7cdc3f75"
+  "content_sha256": "8b464848ee87b0c001e225930db607370ba9e9a0c8a92685bec8bc7d1b99748a"
 }
